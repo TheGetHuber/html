@@ -335,8 +335,8 @@ function SetProblemCount( num, severity )
 // Setup sounds..
 //
 $(document).on( "mouseenter", ".options a",			function() { lua.PlaySound( "garrysmod/ui_hover.wav" ); } );
-$(document).on( "click", ".options a",				function() { lua.PlaySound( "garrysmod/ui_click.wav" ); } );
+$(document).on( "click", ".options a",				function() { lua.PlaySound( "minecraft/ui_click.mp3" ); } );
 $(document).on( "mouseenter", ".noisy",				function() { lua.PlaySound( "garrysmod/ui_hover.wav" ); } );
-$(document).on( "click", ".noisy",					function() { lua.PlaySound( "garrysmod/ui_click.wav" ); } );
+$(document).on( "click", ".noisy",					function() { lua.PlaySound( "minecraft/ui_click.mp3" ); } );
 $(document).on( "mouseenter", ".ui_sound_return",	function() { lua.PlaySound( "garrysmod/ui_hover.wav" ); } );
-$(document).on( "click", ".ui_sound_return",		function() { lua.PlaySound( "garrysmod/ui_return.wav" ); } );
+$(document).on( "click", ".ui_sound_return",		function() { lua.PlaySound( "minecraft/ui_click.mp3" ); } );

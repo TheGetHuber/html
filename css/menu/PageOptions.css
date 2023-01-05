@@ -1,3 +1,6 @@
+body{
+	text-shadow: 2px 2px 0px #0009;
+}
 
 DIV.page DIV.options
 {
@@ -57,7 +60,6 @@ DIV.page DIV.options, DIV.page DIV.options A {
 	/*! font-size: 18px; */
 	text-decoration: none;
 	color: #fff;
-	text-shadow: 2px 2px 0px #0009;
 	margin: 55px auto 0 auto;
 	margin-top: 15vh;
 }
@@ -220,7 +222,7 @@ div.centermessage.left {
 }
 
 div.centermessage span {
-	color: black;
+	color: white;
 	display: block;
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -236,7 +238,7 @@ div.centermessage label {
 div.centermessage a
 {
 	display: block;
-	color: black;
+	color: white;
 	font-size: 16px;
 	border-radius: 4px;
 	background: #ddd;
@@ -286,7 +288,7 @@ input.preset_name
 
 div.centermessage .button {
 	display: block;
-	color: black;
+	color: white;
 	font-size: 16px;
 	border-radius: 4px;
 	background: #ddd;
@@ -347,12 +349,23 @@ div.centermessage .subbed:hover {
 	background: #cadeca !important;
 }
 
+.title{
+	font-size: 24pt;
+	color: yellow;
+	text-shadow: 4px 4px 0px rgb(64,64,0);
+}
 .titleimage {
 	display: block;
 	margin: -21% 0 0 -18%;
 }
+.titlesplash {
+	position: absolute;
+	margin: 49px 0 0 270px;
+	transform: scale(1.0) rotate(-20deg);
+}
 
 table {
+	color: white;
 	width: 496px;
 	display: flex;
 	flex-direction: row;
@@ -360,10 +373,7 @@ table {
 }
 thead {
 	width: 48px;
-	margin-top: 164px;
-}
-tbody{
-	margin-top: 20px;
+	margin-top: 167px;
 }
 tr {
 	display: flex;
@@ -372,25 +382,38 @@ tr {
 	margin-top: 8px;
 }
 td {
-	width: 196px;
+	width: 194px;
 	height: 95%;
 	text-align: center;
 	background: url(../../img/mc-mediumbutton.png);
+	background-size: 100%;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
 }
+td span{
+	margin: 0 auto;
+}
 td:hover{
 	background: url(../../img/mc-mediumbutton-hover.png);
+	background-size: 100%;
 }
 td:active{
 	background: url(../../img/mc-mediumbutton-active.png);
+	background-size: 100%;
 }
 DIV.page DIV.options a {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-	margin-top: 15px;
+	margin-top: 19px;
+	font-weight: normal;
+}
+DIV.page DIV.options number {
+	width: 100%;
+	margin-top: 80px;
+	font-weight: normal;
+	margin-left: -100%;
 }
 th {
 	width: 398px;
@@ -418,4 +441,28 @@ th:active{
 }
 .mc-smallbutton:active{
 	background: url(../../img/ms-smallbutton-click.png);
+}
+.optionquitmenu {
+	margin-top: 31px;
+}
+.buttonblank{
+	width: 6px;
+	background: none;
+}
+.buttonblank:hover{
+	background: none;
+}
+.buttonblank:active{
+	background: none;
+}
+
+.floating{
+	background: none;
+	text-align: center;
+}
+.floating:hover{
+	background: none;
+}
+.floating:active{
+	background: none;
 }
