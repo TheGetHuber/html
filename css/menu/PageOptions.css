@@ -353,30 +353,69 @@ div.centermessage .subbed:hover {
 }
 
 table {
-	margin-top: 19vh;
-	width: 400px;
+	width: 496px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	margin: 19vh 0 0 -48px;
 }
-thead{
-
+thead {
+	width: 48px;
+	margin-top: 164px;
 }
 tbody{
 	margin-top: 20px;
 }
 tr {
 	display: flex;
-	margin-top: 8px;
 	height: 40px;
+	width: 100%;
+	margin-top: 8px;
 }
 td {
 	width: 196px;
 	height: 95%;
-	background-color: firebrick;
+	text-align: center;
+	background: url(../../img/mc-mediumbutton.png);
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+}
+td:hover{
+	background: url(../../img/mc-mediumbutton-hover.png);
+}
+td:active{
+	background: url(../../img/mc-mediumbutton-active.png);
+}
+DIV.page DIV.options a {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	margin-top: 15px;
+}
+th {
+	width: 398px;
+	height: 38px;
+	background: url(../../img/mc-button.png);
 	text-align: center;
 	display: flex;
 	align-items: center;
-}
-DIV.page DIV.options td a {
 	margin: 0 auto;
+}
+th:hover{
+	background: url(../../img/mc-button-hover.png);
+}
+th:active{
+	background: url(../../img/mc-button-active.png);
+}
+
+.mc-smallbutton{
+	width: 38px; /*FUCKING SHIT, WHY IN THE FUCKING HELL SOMETHING ADDS 2PX TO WIDHT AND HEIGHT??*/
+	height: 38px; /*WELL, NOW ITS NOT 40 PX BUT 38PX*/
+	background: url(../../img/mc-smallbutton.png);
+}
+.mc-smallbutton:hover{
+	background: url(../../img/ms-smallbutton-hover.png);
+}
+.mc-smallbutton:active{
+	background: url(../../img/ms-smallbutton-click.png);
 }

@@ -1,46 +1,51 @@
+<div class="page" ng-controller="ControllerMain">
 
-	<div class="page" ng-controller="ControllerMain">
+	<div class="options">
+		<img class="titleimage" src='img/mc-logotitle.png' />
 
-		<div class="options">
-			<img class="titleimage" src='img/mc-logotitle.png' />
+		<table>
+			<thead>
+				<tr>
+					<td class="mc-smallbutton"><a ng-href="#/saves/"></a></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th><a ng-href="#/newgame/" ng-Tranny="'new_game'"></a></th>
+				</tr>
+				<tr>
+					<th><a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a></th>
+				</tr>
+				<tr>
+					<td><a ng-href="#/addons/" ng-Tranny="'addons'"></a></td>
+					<td><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></td>
+				
+				</tr>
+				<tr>
+					<td><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></td>
+					<td><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a></td>
+				</tr>
+			</tbody>
+			<thead>
+				<tr>
+					<td class="mc-smallbutton"><a ng-href="#/demos/"></a></td>
+				</tr>
+			</thead>
+		</table>
 
-			<table>
-				<thead>
-					<tr>
-						<td><a ng-href="#/newgame/" ng-Tranny="'new_game'"></a></td>
-						<td><a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a></td>
-					</tr>
-					<tr>
-						<td><a ng-href="#/addons/" ng-Tranny="'addons'"></a></td>
-						<td><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></td>
-					</tr>
-					<tr>
-						<td><a ng-href="#/saves/" ng-Tranny="'saves'"></a></td>
-						<td><a ng-href="#/demos/" ng-Tranny="'demos'"></a></td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></td>
-						<td><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a></td>
-					</tr>
-				</tbody>
-			</table>
-	
-		</div>
-	
-		<div class="news" ng-hide="NewsList.length == 0">
-			<div class="news_item" style="{{NewsItemBackground( CurrentNewsItem.HeaderImage )}}" ng-hide="HideNews">
-				<div>
-					<span ng-click="OpenInSteam( CurrentNewsItem.Url )">{{CurrentNewsItem.Title}}</span>
-					<font>{{CurrentNewsItem.SummaryHtml}}</font>
-				</div>
-			</div>
-			<div class='news_buttons'>
-				<div ng-click="ToggleNewsList()" ng-hide="HideNews || AnyNewNewsItems"><img src="../materials/icon16/cross.png"></div>
-				<div class="{{IfElse( NewsItem.Url == CurrentNewsItem.Url, 'selected', '' )}} {{NewsItemClass( NewsItem )}}" ng-repeat="NewsItem in NewsList | orderBy: 'Date'" ng-click="SelectItem(NewsItem)"></div>
-			</div>
-		</div>
-	
 	</div>
-	
+
+	<div class="news" ng-hide="NewsList.length == 0">
+		<div class="news_item" style="{{NewsItemBackground( CurrentNewsItem.HeaderImage )}}" ng-hide="HideNews">
+			<div>
+				<span ng-click="OpenInSteam( CurrentNewsItem.Url )">{{CurrentNewsItem.Title}}</span>
+				<font>{{CurrentNewsItem.SummaryHtml}}</font>
+			</div>
+		</div>
+		<div class='news_buttons'>
+			<div ng-click="ToggleNewsList()" ng-hide="HideNews || AnyNewNewsItems"><img src="../materials/icon16/cross.png"></div>
+			<div class="{{IfElse( NewsItem.Url == CurrentNewsItem.Url, 'selected', '' )}} {{NewsItemClass( NewsItem )}}" ng-repeat="NewsItem in NewsList | orderBy: 'Date'" ng-click="SelectItem(NewsItem)"></div>
+		</div>
+	</div>
+
+</div>
