@@ -1,14 +1,10 @@
 
-UL.category LI.mapicon IMG.thumbnail
-{
-	width: 128px;
-	height: 128px;
+UL.category LI.mapicon IMG.thumbnail {
+	width: 64px;
+	height: 64px;
+	margin: 4px;
 }
-UL.category LI.mapicon IMG.favtoggle
-{
-	position: absolute;
-	top: 8px;
-	right: 8px;
+UL.category LI.mapicon IMG.favtoggle {
 	visibility: hidden;
 
 	background-image: url( '../../img/favourite.png?1' );
@@ -34,41 +30,37 @@ UL.category LI.mapicon IMG.faviconremove:hover
 	background-image: url( '../../img/favourite_remove.png?1' );
 }
 
-UL.category LI.mapicon
-{
-	position: relative;
-	width: 128px;
-	text-align: center;
-	font-size: 10px;
-	padding: 6px;
-	margin: 2px;
+UL.category LI.mapicon {
+	/*! position: relative; */
+	width: 540px;
 	cursor: pointer;
 	vertical-align: top;
+	height: 72px;
+	background: black;
+	margin: 2px;
+	display: flex;
+	font-size: medium;
 }
 
 UL.category LI.mapicon span {
 	word-break: break-all;
+	text-shadow: none;
+	color: white;
+	margin: 7px;
 }
 
-.maplist
-{
-	right: 256px;
-	top: 16px;
-	left: 16px;
-	bottom: 16px;
-	position: absolute;
-	background-color: white;
-	border-radius: 5px;
-	padding: 10px;
+.maplist {
+	width: 100%;
+	height: 100%;
+	background: url(../../img/minecraft/options_background.png);
+	display: flex;
+	flex-direction: column;
 }
 
-.maplist .controls
-{
-	width: 190px;
-	position: absolute;
-	left: 10px;
-	top: 10px;
-	bottom: 10px;
+.maplist .controls {
+	width: 100%;
+	height: 96px;
+	overflow: auto;
 }
 
 UL.category LI.mapicon.selected
@@ -77,15 +69,12 @@ UL.category LI.mapicon.selected
 	border-radius: 3px;
 }
 
-gamesettings
-{
-	right: 16px;
-	top: 16px;
-	width: 226px;
-	bottom: 16px;
-	position: absolute;
+gamesettings {
+	/*! position: absolute; */
 	background-color: white;
 	border-radius: 5px;
+	height: 96px;
+	display: flex;
 }
 
 gamesettings bottom

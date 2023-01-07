@@ -1,4 +1,4 @@
-@keyframes splash{
+@keyframes splash{ /*TODO: fix the optimisation*/
     from {
         font-size: xx-large;
     }

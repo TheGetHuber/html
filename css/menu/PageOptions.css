@@ -39,7 +39,7 @@ DIV.page DIV.options UL LI {
 }
 
 DIV.page DIV.options UL LI A {
-	background: url("../../img/mc-button.png");
+	background: url("../../img/minecraft/mc-button.png");
 	background-size: 100%;
 	background-blend-mode: normal;
 	width: 400px;
@@ -48,12 +48,12 @@ DIV.page DIV.options UL LI A {
 }
 
 DIV.page DIV.options UL LI A:hover {
-	background: url("../../img/mc-button-hover.png");
+	background: url("../../img/minecraft/mc-button-hover.png");
 	background-size: 100%;
 }
 
 DIV.page DIV.options UL LI A:active {
-	background: url("../../img/mc-button-active.png");
+	background: url("../../img/minecraft/mc-button-active.png");
 	background-size: 100%;
 }
 DIV.page DIV.options, DIV.page DIV.options A {
@@ -398,7 +398,7 @@ td {
 	width: 194px;
 	height: 95%;
 	text-align: center;
-	background: url(../../img/mc-mediumbutton.png);
+	background: url(../../img/minecraft/mc-mediumbutton.png);
 	background-size: 100%;
 	display: flex;
 	align-items: center;
@@ -408,11 +408,11 @@ td span{
 	margin: 0 auto;
 }
 td:hover{
-	background: url(../../img/mc-mediumbutton-hover.png);
+	background: url(../../img/minecraft/mc-mediumbutton-hover.png);
 	background-size: 100%;
 }
 td:active{
-	background: url(../../img/mc-mediumbutton-active.png);
+	background: url(../../img/minecraft/mc-mediumbutton-active.png);
 	background-size: 100%;
 }
 DIV.page DIV.options a {
@@ -431,29 +431,29 @@ DIV.page DIV.options number {
 th {
 	width: 398px;
 	height: 38px;
-	background: url(../../img/mc-button.png);
+	background: url(../../img/minecraft/mc-button.png);
 	text-align: center;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
 }
 th:hover{
-	background: url(../../img/mc-button-hover.png);
+	background: url(../../img/minecraft/mc-button-hover.png);
 }
 th:active{
-	background: url(../../img/mc-button-active.png);
+	background: url(../../img/minecraft/mc-button-active.png);
 }
 
 .mc-smallbutton{
 	width: 38px; /*FUCKING SHIT, WHY IN THE FUCKING HELL SOMETHING ADDS 2PX TO WIDHT AND HEIGHT??*/
 	height: 38px; /*WELL, NOW ITS NOT 40 PX BUT 38PX*/
-	background: url(../../img/mc-smallbutton.png);
+	background: url(../../img/minecraft/mc-smallbutton.png);
 }
 .mc-smallbutton:hover{
-	background: url(../../img/ms-smallbutton-hover.png);
+	background: url(../../img/minecraft/ms-smallbutton-hover.png);
 }
 .mc-smallbutton:active{
-	background: url(../../img/ms-smallbutton-click.png);
+	background: url(../../img/minecraft/ms-smallbutton-click.png);
 }
 .optionquitmenu {
 	margin-top: 31px;

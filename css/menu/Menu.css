@@ -49,27 +49,24 @@ A
 	text-decoration: none;
 }
 
-DIV.page
-{
-	position: absolute;
+DIV.page {
+	/*! position: absolute; */
 	left: 0px;
 	right: 0px;
 	top: 0px;
 	bottom: 50px;
 }
 
-UL.category
-{
-	margin: 10px;
-	padding: 0;
+UL.category {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
 }
 
-UL.category LI:first-child
-{
+UL.category LI:first-child {
 	list-style: none;
 	padding: 5px;
 	font-size: 32px;
-	color: #444;
 }
 
 UL.category LI:first-child small
@@ -84,14 +81,12 @@ UL.category LI.icon
 }
 
 
-.scrollable
-{
-	overflow: auto;
-	right: 0px;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	position: absolute;
+.scrollable {
+	overflow-y: scroll;
+	display: flex;
+	backdrop-filter: brightness(13%);
+	border-top: 8px solid black;
+	border-bottom: 8px solid black;
 }
 
 .btn-primary, .btn-primary-disabled
