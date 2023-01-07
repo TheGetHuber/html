@@ -1,0 +1,134 @@
+<div class="page" ng-controller="ControllerNewGame">
+
+    <div class="maplist icons">
+
+        <div class="controls">
+
+            <ul style="display: none;">
+                <li class="noisy category {{IfElse( category.category == CurrentCategory, 'active', '' )}}" ng-repeat="category in MapList | orderBy:'order'" ng-hide="CountFiltered(category.maps) == 0" ng-click="SwitchCategory(category.category)">
+                    <div class='name'>{{category.category}}</div>
+                    <div class='count'>{{CountFiltered(category.maps)}}</div>
+                </li>
+            </ul>
+            <div class="maplist-title">
+                <p>Select Map</p>
+            </div>
+
+            <div class='search'>
+                <input type="text" class="search" ng-model="SearchText" autofocus />
+            </div>
+        </div>
+        <div class="scrollable">
+
+            <ul class="category" ng-repeat="category in MapList | orderBy:'order'" ng-hide="category.maps.length == 0" ng-show="CurrentCategory == category.category">
+
+                <!--<li>{{category.category}} <small>{{CountFiltered(category.maps)}} </small><small ng-tranny="category.maps.length == 1 && 'newgame_map' || 'newgame_maps'"></small></li>-->
+
+                <li class="icon mapicon {{MapClass( map )}}" ng-repeat="map in category.maps | orderBy:'toString()' | mapFilter:SearchText" >
+                    <img ng-click="ClickMap( map )" ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
+                    <span>{{map}}</span>
+                    <img ng-click="FavMap( map )" class="{{FavMapClass( map )}} {{FavMapHover( map )}}" src="img/empty.png" />
+                </li>
+
+            </ul>
+
+        </div>	
+        <div class="gamesettings">
+            <table style="margin: 16 auto;width: fit-content;">
+                <tbody style="margin: 0;">
+                    <tr>
+                        <th class="mc-button" ng-Tranny="'start_game'" ng-click="StartGame()" style="width: 300px">
+                            <p>Play Selected World</p>
+                        </th>
+                    </tr>
+                    <td class="mc-button" style="width: 144px">
+                        <p>Edit</p>
+                    </td>
+                    <td class="mc-button" style="width: 144px; margin-left: 8px;">
+                        <p>Delete</p>
+                    </td>
+                </tr>
+                </tbody>
+                <tbody style="margin-left: 16px;">
+                    <tr>
+                        <th ng-Tranny="'start_game'" ng-click="StartGame()" class="mc-button" style="width: 300px">
+                            <p>Create New World</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="mc-button" style="width: 144px">
+                            <p>Re-Create</p>
+                        </td>
+                        <td class="mc-button" style="width: 144px; margin-left: 8px;">
+                            <a href="#/">Cancel</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <gamesettings style="display: none;">
+
+        <div class="dropdown" style="margin: 10px;">
+
+            <div class="label" onclick="$(this).siblings('.contents').toggle()">
+                <span ng-tranny="MaxPlayersOption.label">{{MaxPlayersOption.label}}</span>
+                <i class='caret'></i>
+            </div>
+            <div class="contents" onclick="$(this).hide()">
+                <div ng-repeat="ply in Players" ng-click="UpdateMaxPlayers( ply )" ng-tranny="ply.label">
+                {{ply.label}}
+                </div>
+            </div>
+        </div>
+
+        <div class="scrollable" style="margin: 10px; bottom: 80px; top: 32px">
+
+            <div class='control' ng-show="MaxPlayers > 1">
+                <label ng-Tranny="'server_name'"></label>
+                <input type="text" ng-model="ServerSettings.hostname" />
+            </div>
+
+            <div class='control' ng-show="MaxPlayers > 1">
+                <input type="checkbox" ng-model="ServerSettings.sv_lan" ng-bind="CheckboxCheck()" />
+                <label ng-Tranny="'lan_server'"></label>
+            </div>
+
+            <div class='control' ng-show="MaxPlayers > 1">
+                <input type="checkbox" ng-model="ServerSettings.p2p_enabled" ng-bind="CheckboxCheck()" />
+                <label ng-Tranny="'p2p_server'"></label>
+            </div>
+
+            <div class='control' ng-show="MaxPlayers > 1">
+                <input type="checkbox" ng-model="ServerSettings.p2p_friendsonly" id="p2p_friendsonly" />
+                <label ng-Tranny="'p2p_server_friendsonly'"></label>
+            </div>
+
+            <div class='control control-text' ng-repeat="s in ServerSettings.Text" ng-show="MaxPlayers > 1 || s.Singleplayer">
+                <label ng-Tranny="s.text"></label>
+                <input type="text" ng-model="s.Value"/>
+            </div>
+
+            <div class='control control-numeric' ng-repeat="s in ServerSettings.Numeric" ng-show="MaxPlayers > 1 || s.Singleplayer">
+                <label ng-Tranny="s.text"></label>
+                <input type="text" ng-model="s.Value"/>
+            </div>
+
+            <div class='control' ng-repeat="s in ServerSettings.CheckBox" ng-show="MaxPlayers > 1 || s.Singleplayer">
+                <input type="checkbox" ng-model="s.Value" />
+                <label ng-Tranny="s.text"></label>
+            </div>
+
+        </div>
+
+
+    <bottom>
+        <button class='btn-primary' ng-Tranny="'start_game'" ng-click="StartGame()">...</button>
+    </bottom>
+
+        </gamesettings>
+
+    </div>
+
+
+</div>

@@ -382,11 +382,9 @@ table {
 	width: 496px;
 	display: flex;
 	flex-direction: row;
-	margin: 19vh 0 0 -48px;
 }
 thead {
 	width: 48px;
-	margin-top: 167px;
 }
 tr {
 	display: flex;
@@ -398,22 +396,9 @@ td {
 	width: 194px;
 	height: 95%;
 	text-align: center;
-	background: url(../../img/minecraft/mc-mediumbutton.png);
-	background-size: 100%;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
-}
-td span{
-	margin: 0 auto;
-}
-td:hover{
-	background: url(../../img/minecraft/mc-mediumbutton-hover.png);
-	background-size: 100%;
-}
-td:active{
-	background: url(../../img/minecraft/mc-mediumbutton-active.png);
-	background-size: 100%;
 }
 DIV.page DIV.options a {
 	margin: 0 auto;
@@ -431,29 +416,8 @@ DIV.page DIV.options number {
 th {
 	width: 398px;
 	height: 38px;
-	background: url(../../img/minecraft/mc-button.png);
-	text-align: center;
 	display: flex;
-	align-items: center;
 	margin: 0 auto;
-}
-th:hover{
-	background: url(../../img/minecraft/mc-button-hover.png);
-}
-th:active{
-	background: url(../../img/minecraft/mc-button-active.png);
-}
-
-.mc-smallbutton{
-	width: 38px; /*FUCKING SHIT, WHY IN THE FUCKING HELL SOMETHING ADDS 2PX TO WIDHT AND HEIGHT??*/
-	height: 38px; /*WELL, NOW ITS NOT 40 PX BUT 38PX*/
-	background: url(../../img/minecraft/mc-smallbutton.png);
-}
-.mc-smallbutton:hover{
-	background: url(../../img/minecraft/ms-smallbutton-hover.png);
-}
-.mc-smallbutton:active{
-	background: url(../../img/minecraft/ms-smallbutton-click.png);
 }
 .optionquitmenu {
 	margin-top: 31px;
@@ -478,4 +442,21 @@ th:active{
 }
 .floating:active{
 	background: none;
+}
+
+.mc-button{
+    min-width: 40px;
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: url("../../img/minecraft/mc-chunk0.png") no-repeat left, url("../../img/minecraft/mc-chunk1.png") no-repeat right, url("../../img/minecraft/mc-chunk2.png") repeat-x center;
+}
+.mc-button *{
+	color: white;
+    margin: 0 auto 0 auto;
+}
+
+.mc-button:hover{
+	background: url("../../img/minecraft/mc-chunk0-hover.png") no-repeat left, url("../../img/minecraft/mc-chunk1-hover.png") no-repeat right, url("../../img/minecraft/mc-chunk2-hover.png") repeat-x center;
 }

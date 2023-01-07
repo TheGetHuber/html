@@ -7,40 +7,40 @@
             </div>
             <img class="titleimage" src='img/minecraft/mc-logotitle.png' />
         </div>
-        <table>
-            <thead style="margin-right: 6px;">
+        <table style="margin: 19vh 0 0 -48px;">
+            <thead style="margin-right: 6px; margin-top: 167px;">
                 <tr>
-                    <td class="mc-smallbutton"><a ng-href="#/saves/"></a></td>
+                    <td class="mc-button" style="width: 40px;><a ng-href="#/saves/"></a></td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th><a ng-href="#/newgame/" ng-Tranny="'new_game'"></a></th>
+                    <th class="mc-button" style="width: 398px;"><a ng-href="#/newgame/" ng-Tranny="'new_game'"></a></th>
                 </tr>
                 <tr>
-                    <th><a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a></th>
+                    <th class="mc-button" style="width: 398px;"><a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a></th>
                 </tr>
                 <tr>
-                    <td><a ng-href="#/addons/" ng-Tranny="'addons'"></a></td>
+                    <td class="mc-button" style="width: 194px"><a ng-href="#/addons/" ng-Tranny="'addons'"></a></td>
                     <td class="buttonblank"></td>
-                    <td><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></td>
+                    <td class="mc-button" style="width: 194px"><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></td>
                 
                 </tr>
                 <tr class="optionquitmenu">
-                    <td><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></td>
+                    <td class="mc-button" style="width: 194px"><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></td>
                     <td class="buttonblank"></td>
-                    <td><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a></td>
+                    <td class="mc-button" style="width: 194px"><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a></td>
                 </tr>
                 <tr>
-                    <td style="overflow: visible; margin-top: 15px;" ng-click="ToggleProblems()">
+                    <td class="mc-button" style="width: 194px; margin-top: 15px;" ng-click="ToggleProblems()">
                         <span ng-Tranny="'problems'"></span>
                         <number class="{{IfElse( ProblemSeverity > 0, 'severity' + ProblemSeverity, '' )}}">{{ProblemCount}}</number>
                     </td>
                 </tr>
             </tbody>
-            <thead style="margin-left: 6px;">
+            <thead style="margin-left: 6px; margin-top: 167px;">
                 <tr>
-                    <td class="mc-smallbutton"><a ng-href="#/demos/"></a></td>
+                    <td class="mc-button" style="width: 40px;"><a ng-href="#/demos/"></a></td>
                 </tr>
             </thead>
         </table>
