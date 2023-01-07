@@ -37,11 +37,12 @@ INPUT.gm_search
 	width: 80%;
 	margin-bottom: 5px;
 }
-INPUT[type="text"], INPUT[type="number"]
-{
-	border: 1px solid #ABADB3;
-	border-radius: 2px;
-	outline-color: #08f;
+INPUT[type="text"], INPUT[type="number"] {
+	border: none;
+	background: black;
+	color: white;
+	font-family: Minecraft;
+	outline: 2px solid #888;
 }
 
 A
@@ -51,16 +52,16 @@ A
 
 DIV.page {
 	/*! position: absolute; */
-	left: 0px;
-	right: 0px;
-	top: 0px;
-	bottom: 50px;
+	height: 100%;
+	/*! display: flex; */
+	width: 100%;
 }
 
 UL.category {
-	display: flex;
+	/*! display: flex; */
 	flex-direction: column;
 	margin: 0 auto;
+	padding-right: 20px;
 }
 
 UL.category LI:first-child {
@@ -87,7 +88,7 @@ UL.category LI.icon
 	backdrop-filter: brightness(13%);
 	border-top: 8px solid black;
 	border-bottom: 8px solid black;
-	height: 1400px;
+	height: auto;
 }
 
 .btn-primary, .btn-primary-disabled

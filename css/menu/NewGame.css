@@ -8,6 +8,8 @@ UL.category LI.mapicon IMG.favtoggle {
 	visibility: hidden;
 
 	background-image: url( '../../img/favourite.png?1' );
+	height: 16px;
+	width: 16px;
 }
 UL.category LI.mapicon:hover IMG.favtoggle
 {
@@ -31,12 +33,9 @@ UL.category LI.mapicon IMG.faviconremove:hover
 }
 
 UL.category LI.mapicon {
-	/*! position: relative; */
 	width: 540px;
 	cursor: pointer;
-	vertical-align: top;
 	height: 72px;
-	background: black;
 	margin: 2px;
 	display: flex;
 	font-size: medium;
@@ -50,7 +49,7 @@ UL.category LI.mapicon span {
 }
 
 .maplist {
-	width: 100%;
+	width: auto;
 	height: 100%;
 	background: url(../../img/minecraft/options_background.png);
 	display: flex;
@@ -59,23 +58,28 @@ UL.category LI.mapicon span {
 
 .maplist .controls {
 	width: 100%;
-	height: 96px;
-	overflow-y: scroll;
+	min-height: 96px;
+	backdrop-filter: brightness(25%);
+	z-index: 100;
 	display: flex;
-	position: relative;
+	flex-direction: column;
 }
-UL.category LI.mapicon.selected
-{
-	background-color: #97c5ff;
-	border-radius: 3px;
+
+UL.category LI.mapicon.selected {
+	outline: 2px solid gray;
+	/*! margin: 0; */
+}
+
+.gamesettings {
+	min-height: 128px;
+	backdrop-filter: brightness(25%);
 }
 
 gamesettings {
-	/*! position: absolute; */
-	background-color: white;
 	border-radius: 5px;
-	height: 179px;
-	display: flex;
+	min-height: 128px;
+	/*! display: flex; */
+	backdrop-filter: brightness(25%);
 }
 
 gamesettings bottom
@@ -212,15 +216,13 @@ gamesettings .control-numeric input[type=text]
 	height: 20px;
 }
 
-.controls .search
-{
-	position: absolute;
-	bottom: 0px;
-	left: 0;
-	right: 0;
+.controls .search {
 	padding: 4px;
-	width: 100%;
-	box-sizing: border-box;
+	margin: 0 auto;
+	margin-top: -5px;
+	width: 400px;
+	height: 40px;
+	font-size: medium;
 }
 
 .controls UL
@@ -236,9 +238,8 @@ gamesettings .control-numeric input[type=text]
 	bottom: 32px;
 }
 
-.controls LI.category
-{
-	background-color: #ddd;
+.controls LI.category {
+	/*! background-color: #ddd; */
 	margin: 0;
 	margin-bottom: 5px;
 	font-size: 11px;
@@ -250,9 +251,8 @@ gamesettings .control-numeric input[type=text]
 	position: relative;
 }
 
-.controls LI.active
-{
-	background-color: #9cf;
+.controls LI.active {
+	/*! background-color: #9cf; */
 	color: #333;
 }
 
@@ -278,4 +278,11 @@ gamesettings .control-numeric input[type=text]
 	font-size: 10px;
 	overflow: hidden;
 	white-space: nowrap;
+}
+
+.maplist-title {
+	color: white;
+	margin: 0 auto;
+	display: flex;
+	font-size: medium;
 }
