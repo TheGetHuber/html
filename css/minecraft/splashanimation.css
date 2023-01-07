@@ -1,0 +1,8 @@
+@keyframes splash{
+    from {
+        font-size: xx-large;
+    }
+    to {
+        font-size: x-large;
+    }
+}

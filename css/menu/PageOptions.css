@@ -359,10 +359,23 @@ div.centermessage .subbed:hover {
 	margin: -21% 0 0 -18%;
 }
 .titlesplash {
-	position: absolute;
-	margin: 49px 0 0 270px;
 	transform: scale(1.0) rotate(-20deg);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 0.4s;
+	animation-name: splash;
+	margin: 0 auto;
 }
+.splashcontainer {
+	width: 512px;
+	height: 128px;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	margin-left: 120px;
+}
+   
 
 table {
 	color: white;

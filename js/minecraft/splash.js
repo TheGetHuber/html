@@ -6,5 +6,4 @@ window.onload = function(){
     let splash = document.querySelector(".titlesplash")
     let text = splashes[Math.ceil(Math.random() * splashes.length-1)]
     splash.textContent = text
-    splash.style.margin = "49px 0 0 " + 49 +" px"
 }
