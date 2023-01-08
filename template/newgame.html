@@ -24,15 +24,15 @@
 
                 <!--<li>{{category.category}} <small>{{CountFiltered(category.maps)}} </small><small ng-tranny="category.maps.length == 1 && 'newgame_map' || 'newgame_maps'"></small></li>-->
 
-                <li class="icon mapicon {{MapClass( map )}}" ng-repeat="map in category.maps | orderBy:'toString()' | mapFilter:SearchText" >
-                    <img ng-click="ClickMap( map )" ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
+                <li ng-click="ClickMap( map )" class="icon mapicon {{MapClass( map )}}" ng-repeat="map in category.maps | orderBy:'toString()' | mapFilter:SearchText" >
+                    <img ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
                     <span>{{map}}</span>
                     <img ng-click="FavMap( map )" class="{{FavMapClass( map )}} {{FavMapHover( map )}}" src="img/empty.png" />
                 </li>
 
             </ul>
 
-        </div>	
+        </div>
         <div class="gamesettings">
             <table style="margin: 16 auto;width: fit-content;">
                 <tbody style="margin: 0;">
@@ -42,7 +42,7 @@
                         </th>
                     </tr>
                     <td class="mc-button" style="width: 144px">
-                        <p>Edit</p>
+                        <a ng-href="#/gamesettings/">Edit</a>
                     </td>
                     <td class="mc-button" style="width: 144px; margin-left: 8px;">
                         <p>Delete</p>
@@ -60,7 +60,7 @@
                             <p>Re-Create</p>
                         </td>
                         <td class="mc-button" style="width: 144px; margin-left: 8px;">
-                            <a href="#/">Cancel</a>
+                            <a ng-href="#/">Cancel</a>
                         </td>
                     </tr>
 

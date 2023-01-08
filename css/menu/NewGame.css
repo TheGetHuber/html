@@ -286,3 +286,6 @@ gamesettings .control-numeric input[type=text]
 	display: flex;
 	font-size: medium;
 }
+.maplist-scrollable{
+	height: auto;
+}

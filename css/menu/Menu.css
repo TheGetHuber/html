@@ -66,7 +66,6 @@ UL.category {
 
 UL.category LI:first-child {
 	list-style: none;
-	padding: 5px;
 	font-size: 32px;
 }
 
@@ -88,7 +87,7 @@ UL.category LI.icon
 	backdrop-filter: brightness(13%);
 	border-top: 8px solid black;
 	border-bottom: 8px solid black;
-	height: auto;
+	height: inherit;
 }
 
 .btn-primary, .btn-primary-disabled

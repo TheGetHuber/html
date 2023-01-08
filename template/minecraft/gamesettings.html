@@ -1,0 +1,47 @@
+<div class="page" ng-controller="ControllerGameSettings" style="background: url(../../img/minecraft/options_background.png);">
+
+    <div class="container">
+        <table class="worldnamebox">
+            <tbody>
+                <tr>
+                    <td><p style="color: white;">Edit World</p></td>
+                    <td style="margin: 0;"><p>World Name</p></td>
+                    <td><input type="text" class="search" ng-tranny="'{{map}}'" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="buttonscontainer">
+            <tbody style="margin: 0 auto;">
+                <tr style="flex-direction: column; height: unset;">
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Reset Icon</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Open World Folder</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Make Backup</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Open Backups Folder</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Optimize World</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Export World Generation Settings</p>
+                    </td>
+                    <td style="flex-direction: row;">
+                        <div class="mc-button" style="width: 194px;">
+                            <a ng-href="/newgame/">Save</a>
+                        </div>
+                        <div class="mc-button" style="width: 194px; margin-left: 8px;">
+                            <a ng-href="/newgame/">Cancel</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
