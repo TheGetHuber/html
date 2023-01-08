@@ -27,6 +27,10 @@ App.filter( 'mapFilter', function() {
 
 function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 {
+	let list = document.querySelector("#listofcategories")
+    let button = document.querySelector("#changecategory")
+
+
 	for ( var i = 0; i < gScope.MapList.length; i++ )
 	{
 		if ( gScope.MapList[i][ "category" ] == "Favourites" )
@@ -269,6 +273,16 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 			document.getElementById( "p2p_friendsonly" ).disabled = false;
 		}
 	}
+	
+    console.log(list.childElementCount)
+    button.addEventListener("click", function(){
+        for(let i = 0; i < list.childElementCount; i++){
+        if(list.children[i].style.display != "none"){
+            list.children[i].style.display = "none"
+            list.children[(i+1)%list.childElementCount].style.display = "block"
+            break
+        }
+    }})
 }
 
 function SetLastMap( map, category )

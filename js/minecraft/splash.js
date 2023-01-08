@@ -7,7 +7,7 @@ let splashes = ["Garry's Mod!", "Flaxkikare!", "Now with Mingebags!",
     "Multiplayer!", "Meaty", "You need me", "Distorted trumpet!", "Now with ARG's!",
     "Now with Lua!", "Wiremod!", "Now without Gman virus!", "Creepy!", "Door stuck!",
     "Now without backdoors!", "Also try Team Fortress 2!", "Heavy is dead!?", "garry!", "Rabscuttle!",
-    "Facepunch!", "Missing texture!", "s&box!", "Roblox!", "M9K Weapons!", "Toybox!"]
+    "Facepunch!", "Missing texture!", "s&box!", "Roblox!", "M9K Weapons!", "Toybox!", "Losing is fun!"]
 
 window.onload = function(){
     let splash = document.querySelector(".titlesplash")

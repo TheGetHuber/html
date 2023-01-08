@@ -225,35 +225,25 @@ gamesettings .control-numeric input[type=text]
 	font-size: medium;
 }
 
-.controls UL
-{
-	margin: 0;
-	padding: 0;
+.controls UL {
 	list-style: none;
 	overflow: auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 32px;
 }
 
 .controls LI.category {
 	/*! background-color: #ddd; */
-	margin: 0;
-	margin-bottom: 5px;
+	/*! margin: 0; */
 	font-size: 11px;
-	font-weight: bold;
-	border-radius: 3px;
-	color: #555;
+	color: white;
 	height: 26px;
 	cursor: pointer;
-	position: relative;
+	display: none;
 }
 
 .controls LI.active {
 	/*! background-color: #9cf; */
 	color: #333;
+	display: block;
 }
 
 .controls LI.category .name

@@ -4,12 +4,7 @@
 
         <div class="controls">
 
-            <ul style="display: none;">
-                <li class="noisy category {{IfElse( category.category == CurrentCategory, 'active', '' )}}" ng-repeat="category in MapList | orderBy:'order'" ng-hide="CountFiltered(category.maps) == 0" ng-click="SwitchCategory(category.category)">
-                    <div class='name'>{{category.category}}</div>
-                    <div class='count'>{{CountFiltered(category.maps)}}</div>
-                </li>
-            </ul>
+            
             <div class="maplist-title">
                 <p>Select Map</p>
             </div>

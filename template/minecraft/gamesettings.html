@@ -1,23 +1,26 @@
-<div class="page" ng-controller="ControllerGameSettings" style="background: url(../../img/minecraft/options_background.png);">
+<div class="page" id="gamesettings" ng-controller="ControllerNewGame">
 
     <div class="container">
         <table class="worldnamebox">
             <tbody>
-                <tr>
                     <td><p style="color: white;">Edit World</p></td>
                     <td style="margin: 0;"><p>World Name</p></td>
-                    <td><input type="text" class="search" ng-tranny="'{{map}}'" /></td>
+                    <td><input type="text" class="search" ng-tranny="'{{map}}'" disabled /></td>
                 </tr>
             </tbody>
         </table>
         <table class="buttonscontainer">
             <tbody style="margin: 0 auto;">
                 <tr style="flex-direction: column; height: unset;">
-                    <td class="mc-button" style="width: 396px;">
-                        <p>Reset Icon</p>
+                    <td id="changecategory" class="mc-button" style="width: 396px;">
+                        <ul id="listofcategories">
+                            <li class="noisy category {{IfElse( category.category == CurrentCategory, 'active', '' )}}" ng-repeat="category in MapList | orderBy:'order'" ng-hide="CountFiltered(category.maps) == 0" ng-click="SwitchCategory(category.category)">
+                                <div class='name'>{{category.category}}</div>
+                            </li>
+                        </ul>
                     </td>
                     <td class="mc-button" style="width: 396px;">
-                        <p>Open World Folder</p>
+                        <p>Singleplayer</p>
                     </td>
                     <td class="mc-button" style="width: 396px;">
                         <p>Make Backup</p>
@@ -33,10 +36,10 @@
                     </td>
                     <td style="flex-direction: row;">
                         <div class="mc-button" style="width: 194px;">
-                            <a ng-href="/newgame/">Save</a>
+                            <a ng-href="#/newgame/">Save</a>
                         </div>
                         <div class="mc-button" style="width: 194px; margin-left: 8px;">
-                            <a ng-href="/newgame/">Cancel</a>
+                            <a ng-href="#/">Cancel</a>
                         </div>
                     </td>
                 </tr>
