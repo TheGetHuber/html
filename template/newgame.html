@@ -1,4 +1,53 @@
-<div class="page" ng-controller="ControllerNewGame">
+<div class="page" id="newmapmenu" ng-controller="ControllerNewGame">
+
+    <div class="gamesettingsmenu">
+        <div class="container">
+            <table class="worldnamebox">
+            <tbody>
+                    <td><p style="color: white;">Edit World</p></td>
+                    <td style="margin: 0;"><p>World Name</p></td>
+                    <td><input type="text" class="search" ng-tranny="'{{map}}'" disabled /></td>
+                </tr>
+            </tbody>
+            </table>
+            <table class="buttonscontainer">
+            <tbody style="margin: 0 auto;">
+                <tr style="flex-direction: column; height: unset;">
+                    <td id="changecategory" class="mc-button" style="width: 396px;" ng-click="SwitchCategory(category.category)">
+                        <ul id="listofcategories">
+                            <li class="noisy category {{IfElse( category.category == CurrentCategory, 'active', '' )}}" ng-repeat="category in MapList | orderBy:'order'" ng-hide="CountFiltered(category.maps) == 0">
+                                <div class='name'>{{category.category}}</div>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Singleplayer</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Make Backup</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Open Backups Folder</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Optimize World</p>
+                    </td>
+                    <td class="mc-button" style="width: 396px;">
+                        <p>Export World Generation Settings</p>
+                    </td>
+                    <td style="flex-direction: row;">
+                        <div class="mc-button" style="width: 194px;">
+                            <p id="gs-savebutton">Save</p>
+                        </div>
+                        <div class="mc-button" style="width: 194px; margin-left: 8px;">
+                            <a ng-href="#/">Cancel</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
 
     <div class="maplist icons">
 
@@ -37,7 +86,7 @@
                         </th>
                     </tr>
                     <td class="mc-button" style="width: 144px">
-                        <a ng-href="#/gamesettings/">Edit</a>
+                        <p id="gs-editbutton">Edit</p>
                     </td>
                     <td class="mc-button" style="width: 144px; margin-left: 8px;">
                         <p>Delete</p>

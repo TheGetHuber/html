@@ -27,10 +27,6 @@ App.filter( 'mapFilter', function() {
 
 function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 {
-	let list = document.querySelector("#listofcategories")
-    let button = document.querySelector("#changecategory")
-
-
 	for ( var i = 0; i < gScope.MapList.length; i++ )
 	{
 		if ( gScope.MapList[i][ "category" ] == "Favourites" )
@@ -273,7 +269,15 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 			document.getElementById( "p2p_friendsonly" ).disabled = false;
 		}
 	}
+
+	//mine shit
 	
+	let list = document.querySelector("#listofcategories")
+    let button = document.querySelector("#changecategory")
+	let savebutton = document.querySelector("#gs-savebutton")
+	let editbutton = document.querySelector("#gs-editbutton")
+	let gamesettingsmenu = document.querySelector(".gamesettingsmenu")
+
     console.log(list.childElementCount)
     button.addEventListener("click", function(){
         for(let i = 0; i < list.childElementCount; i++){
@@ -283,6 +287,14 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
             break
         }
     }})
+	savebutton.addEventListener("click", function(){
+		gamesettingsmenu.style.display = "none"
+	})
+	editbutton.addEventListener("click", function(){
+		gamesettingsmenu.style.display = "block"
+	})
+
+
 }
 
 function SetLastMap( map, category )

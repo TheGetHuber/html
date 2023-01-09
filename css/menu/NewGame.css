@@ -1,3 +1,6 @@
+#newmapmenu{
+    
+}
 
 UL.category LI.mapicon IMG.thumbnail {
 	width: 64px;
@@ -279,3 +282,4 @@ gamesettings .control-numeric input[type=text]
 .maplist-scrollable{
 	height: auto;
 }
+

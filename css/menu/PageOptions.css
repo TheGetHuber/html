@@ -459,9 +459,13 @@ th {
     align-items: center;
     background: url("../../img/minecraft/mc-chunk0.png") no-repeat left, url("../../img/minecraft/mc-chunk1.png") no-repeat right, url("../../img/minecraft/mc-chunk2.png") repeat-x center;
 }
-.mc-button *{
+.mc-button * {
 	color: white;
     margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	font-size: medium;
 }
 
 .mc-button:hover{
@@ -470,8 +474,6 @@ th {
 
 .mc-button a{
 	margin: 0 auto;
-	width: 100%;
-	height: 100%;
 	margin-top: 19px;
 	font-weight: normal;
 }
