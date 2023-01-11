@@ -51,14 +51,11 @@ A
 }
 
 DIV.page {
-	/*! position: absolute; */
 	height: 100%;
-	/*! display: flex; */
 	width: 100%;
 }
 
 UL.category {
-	/*! display: flex; */
 	flex-direction: column;
 	margin: 0 auto;
 	padding-right: 20px;
@@ -66,9 +63,13 @@ UL.category {
 
 UL.category LI:first-child {
 	list-style: none;
-	font-size: 32px;
+	font-size: medium;
+	color: rgb(255,255,85);
+	text-align: center;
+	padding: 1em 0px 2em 0;
+	font-weight: bold;
+	text-shadow: 2px 2px 0px rgb(63,63,21);
 }
-
 UL.category LI:first-child small
 {
 	font-size: 14px;
@@ -88,6 +89,8 @@ UL.category LI.icon
 	border-top: 8px solid black;
 	border-bottom: 8px solid black;
 	height: inherit;
+	flex-direction: column;
+	scrollbar-color: rgb(192,192,192) black;
 }
 
 .btn-primary, .btn-primary-disabled

@@ -282,4 +282,77 @@ gamesettings .control-numeric input[type=text]
 .maplist-scrollable{
 	height: auto;
 }
+/*Game Settings Menu*/
+.gamesettingsmenu {
+    background: url(../../img/minecraft/options_background.png);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.worldnamebox{
+    margin: 16 auto;
+    width: unset;
+}
+.worldnamebox tbody{
+
+}
+.worldnamebox tr{
+    flex-direction: column;
+}
+.worldnamebox td{
+    width: unset;
+}
+.worldnamebox td p{
+    color: #999;
+}
+
+.buttonscontainer{
+    margin: 144px auto;
+}
+.buttonscontainer td{
+    width: unset;
+    margin-top: 6px;
+}
+
+#listofcategories LI.category {
+	/*! background-color: #ddd; */
+	/*! margin: 0; */
+	font-size: 11px;
+	color: white;
+	height: 26px;
+	cursor: pointer;
+	display: none;
+}
+
+#listofcategories LI.active {
+	/*! background-color: #9cf; */
+	color: #333;
+	display: block;
+}
+
+input{
+    margin-top: 16px;
+    width: 398px;
+    height: 40px;
+    padding: 8px;
+}
+/* World Creation Menu*/
+.worldcreationmenu{
+	background: url(../../img/minecraft/options_background.png);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1001;
+}

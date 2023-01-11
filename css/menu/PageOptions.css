@@ -390,12 +390,8 @@ table {
 	display: flex;
 	flex-direction: row;
 }
-thead {
-	width: 48px;
-}
 tr {
 	display: flex;
-	height: 40px;
 	width: 100%;
 	margin-top: 8px;
 }

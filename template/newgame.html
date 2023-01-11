@@ -1,6 +1,30 @@
 <div class="page" id="newmapmenu" ng-controller="ControllerNewGame">
+	
+	<div class="gamerulesmenu" style="display: none;">
+		
+	</div>
+	<div class="worldcreationmenu">
+		<div class="container">
+			<table style="flex-direction: column;">
+				<thead>
+					<tr><th><p>Create New World</p></th></tr>
+					<tr>
+						<th><p>World name</p></th>
+						<th><input type="text" class="search" disabled ng-tranny="fucing niggers"></th>
+						<th><p>Will be saved in: Garry's mod/garrysmod/maps/{{map}}</p></th>
+					</tr>
+				</thead>
+				<tbody>
 
-    <div class="gamesettingsmenu">
+				</tbody>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+    <div class="gamesettingsmenu" style="display: none;">
         <div class="container">
             <table class="worldnamebox">
             <tbody>
@@ -36,8 +60,8 @@
                         <p>Export World Generation Settings</p>
                     </td>
                     <td style="flex-direction: row;">
-                        <div class="mc-button" style="width: 194px;">
-                            <p id="gs-savebutton">Save</p>
+                        <div class="mc-button" id="gs-savebutton" style="width: 194px;">
+                            <p>Save</p>
                         </div>
                         <div class="mc-button" style="width: 194px; margin-left: 8px;">
                             <a ng-href="#/">Cancel</a>
@@ -64,9 +88,9 @@
         </div>
         <div class="scrollable">
 
-            <ul class="category" ng-repeat="category in MapList | orderBy:'order'" ng-hide="category.maps.length == 0" ng-show="CurrentCategory == category.category">
+            <ul class="category" ng-repeat="category in MapList | orderBy:'order'" ng-hide="category.maps.length == 0">
 
-                <!--<li>{{category.category}} <small>{{CountFiltered(category.maps)}} </small><small ng-tranny="category.maps.length == 1 && 'newgame_map' || 'newgame_maps'"></small></li>-->
+                <li>{{category.category}}</li>
 
                 <li ng-click="ClickMap( map )" class="icon mapicon {{MapClass( map )}}" ng-repeat="map in category.maps | orderBy:'toString()' | mapFilter:SearchText" >
                     <img ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
@@ -111,7 +135,7 @@
                 </tbody>
             </table>
         </div>
-        <gamesettings style="display: none;">
+        <gamesettings style="/*display: none;*/">
 
         <div class="dropdown" style="margin: 10px;">
 
@@ -175,4 +199,4 @@
     </div>
 
 
-</div>
+	</div>
