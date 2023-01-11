@@ -50,39 +50,42 @@
 		<div class="gamerulesmenu" style="display: none;">
 			
 		</div>
-		<div class="worldcreationmenu">
+		<div class="worldcreationmenu" style="display: block;">
 			<div class="container">
-				<table class="buttonscontainer" style="flex-direction: column;">
+				<table class="buttonscontainer" style="flex-direction: column; width: 620px;margin: 0;">
 					<thead>
-						<tr><th><p>Create New World</p></th></tr>
-						<tr>
-							<th><p>World name</p></th>
-							<th><input type="text" class="search" disabled ng-tranny="fucing niggers"></th>
-							<th><p>Will be saved in: Garry's mod/garrysmod/maps/{{map}}</p></th>
+						<tr style="margin: 38px 0 0 0;"><th><p style="margin: 0 auto;">Create New World</p></th></tr>
+						<tr style="flex-direction: column;margin: 16px 0 0 0;">
+							<th style="height: 26px;"><p style="color: #a0a0a0;">World Name</p></th>
+							<th><input type="text" class="search" disabled></th>
+							<th style="height: 0;margin-top: 10px;"><p style="color: #a0a0a0;">Will be saved in: garrysmod/maps/{{map}}</p></th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th class="mc-button" style="width: 396px;">Game Mode: Sandbox</th>
-							<th style="position: absolute">Build buildings, kill NPCs, DM with firends</th>
-							<td class="buttonblank"></td>
-							<td class="mc-button" style="width: 396px;">Players Count: 1</td>
+						<tr style="margin-top: 32px">
+							<th class="mc-button" style="width: 300px;"><p>Game Mode: Sandbox</p></th>
+							<th style="position: absolute;margin: 42px 0 0 10px;text-align: left;"><p style="color: #a0a0a0;">Build buildings, kill NPCs, DM with firends, spam props and do fun stuff!</p></th>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>Player Count: 1</p></td>
 						</tr>
-						<tr>
-							<td class="mc-button" style="width: 396px;">Allow Cheats: OFF</td>
-							<th style="position: absolute">sv_cheats 0 or 1</th>
-							<td class="buttonblank"></td>
-							<td class="mc-button" style="width: 396px;">Data Packs</td>
+						<tr style="margin-top: 62px">
+							<th class="mc-button" style="width: 300px;"><p>Allow Cheats: OFF</p></td>
+							<th style="position: absolute;margin: 40px 0 0 10px;text-align: left;"><p style="color: #a0a0a0;">sv_cheats 0 or 1</p></th>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>Data Packs</p></td>
 						</tr>
-						<tr>
-
-							<td class="mc-button" style="width: 396px;">Game Rules</td>
-							<td class="buttonblank"></td>
-							<td class="mc-button" style="width: 396px;">More World Options...</td>
+						<tr style="margin-top: 32px">
+	
+							<th class="mc-button" style="width: 300px;"><p>Game Rules</p></td>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>More World Options...</p></td>
 						</tr>
 					</tbody>
-					<tbody>
-						<tr></tr>
+					<tbody style="position: absolute; bottom: 0;margin-bottom: 16px;">
+						<tr>
+							<th class="mc-button" style="width: 300px;"><p>Create New World</p></td>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>Cancel</p></td>
 					</tbody>
 				</table>
 			</div>
@@ -199,7 +202,7 @@
 					</tbody>
 				</table>
 			</div>
-			<gamesettings style="/*display: none;*/">
+			<gamesettings style="display: none;">
 	
 			<div class="dropdown" style="margin: 10px;">
 	
@@ -280,7 +283,7 @@
 
 	<div class="left" ng-show="ShowBack">
 
-		<a href="#/" class="button ui_sound_return"><img src='img/back_to_main_menu.png'><span ng-Tranny="'back_to_main_menu'" ></span></a>
+		<a href="#/" class="button ui_sound_return" style="z-index: 64665"><img src='img/back_to_main_menu.png'><span ng-Tranny="'back_to_main_menu'" ></span></a>
 
 	</div>
 
@@ -301,9 +304,9 @@
 			<li class="bigicon hidelabel" ng-show="IsCurrentServerFav" ng-click="ToggleServerFavorites( false )"><a href="#/"><img src='img/favourite_server_del.png'><span ng-Tranny="'unfavorite_this_server'"></span></a></li>
 		</span>
 		<li class="bigicon" ng-click="BackToGame()"><a href="#/"><img src='img/back_to_game.png'><span ng-Tranny="'back_to_game'"></span></a></li>
-		<!--
+		
 		<li ng-click="Disconnect()"><a href="#/"><img src='img/disconnect.png'><span ng-Tranny="'disconnect'"></span></a></li>
-		-->
+		
 
 	</ul>
 

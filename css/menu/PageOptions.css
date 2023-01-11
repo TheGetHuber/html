@@ -383,6 +383,9 @@ div.centermessage .subbed:hover {
 	margin-left: 120px;
 }
    
+/* ============================================= */
+/* ============= Global addictions ============= */
+/* ============================================= */
 
 table {
 	color: white;
@@ -390,10 +393,14 @@ table {
 	display: flex;
 	flex-direction: row;
 }
+table *{
+	padding: 0;
+	font-weight: normal;
+}
 tr {
 	display: flex;
 	width: 100%;
-	margin-top: 8px;
+	margin-top: 32px;
 }
 td {
 	width: 194px;
@@ -424,15 +431,9 @@ th {
 }
 .optionquitmenu {
 	margin-top: 31px;
-}
-.buttonblank{
-	width: 6px;
-	background: none;
-}
-.buttonblank:hover{
-	background: none;
-}
-.buttonblank:active{
+
+}.buttonblank {
+	width: 20px;
 	background: none;
 }
 
@@ -440,12 +441,11 @@ th {
 	background: none;
 	text-align: center;
 }
-.floating:hover{
-	background: none;
-}
-.floating:active{
-	background: none;
-}
+
+/* ================================================================================ */
+/* ======================= Minecraft button flexable styles ======================= */
+/* ==== Allows create Minecraft buttons out of elements using only their width ==== */
+/* ================================================================================ */
 
 .mc-button{
     min-width: 40px;

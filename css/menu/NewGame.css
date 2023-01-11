@@ -282,7 +282,11 @@ gamesettings .control-numeric input[type=text]
 .maplist-scrollable{
 	height: auto;
 }
-/*Game Settings Menu*/
+
+/* ============================================== */
+/* ============= Game Settings Menu ============= */
+/* ============================================== */
+
 .gamesettingsmenu {
     background: url(../../img/minecraft/options_background.png);
     margin: 0 auto;
@@ -341,13 +345,16 @@ gamesettings .control-numeric input[type=text]
 	display: block;
 }
 
-input{
-    margin-top: 16px;
+input {
     width: 398px;
     height: 40px;
     padding: 8px;
 }
-/* World Creation Menu*/
+
+/* ============================================= */
+/* ============ World Creation Menu ============ */
+/* ============================================= */
+
 .worldcreationmenu{
 	background: url(../../img/minecraft/options_background.png);
     margin: 0 auto;

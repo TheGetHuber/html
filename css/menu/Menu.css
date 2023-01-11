@@ -7,7 +7,7 @@ BODY
 	-webkit-user-select: none;
 	margin: 0;
 	padding: 0;
-	font-size: 12px;
+	font-size: large;
 	-webkit-font-smoothing: antialiased;
 	outline: none;
 }
@@ -350,5 +350,5 @@ loading
 
 @font-face {
 	font-family: Minecraft;
-	src: url(../../../resource/fonts/Minecraft.ttf);
+	src: url(../../../resource/fonts/Minecraft/Minecraft.ttf);
 }
