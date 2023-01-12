@@ -45,7 +45,230 @@
 		external BEGINS
 	-->
 
+	<div class="page" id="newmapmenu" ng-controller="ControllerNewGame">
 	
+		<div class="gamerulesmenu" style="display: none;">
+			
+		</div>
+		<div class="worldcreationmenu" style="display: none;">
+			<div class="container">
+				<table class="buttonscontainer" style="flex-direction: column; width: 620px;margin: 0;">
+					<thead>
+						<tr style="margin: 38px 0 0 0;"><th><p style="margin: 0 auto;">Create New World</p></th></tr>
+						<tr style="flex-direction: column;margin: 16px 0 0 0;">
+							<th style="height: 26px;"><p style="color: #a0a0a0;">World Name</p></th>
+							<th><input type="text" class="search" disabled></th>
+							<th style="height: 0;margin-top: 10px;"><p style="color: #a0a0a0;">Will be saved in: garrysmod/maps/{{map}}</p></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr style="margin-top: 32px">
+							<th class="mc-button" style="width: 300px;"><p>Game Mode: Sandbox</p></th>
+							<th style="position: absolute;margin: 42px 0 0 10px;text-align: left;"><p style="color: #a0a0a0;">Build buildings, kill NPCs, DM with firends, spam props and do fun stuff!</p></th>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>Player Count: 1</p></td>
+						</tr>
+						<tr style="margin-top: 62px">
+							<th class="mc-button" style="width: 300px;"><p>Allow Cheats: OFF</p></td>
+							<th style="position: absolute;margin: 40px 0 0 10px;text-align: left;"><p style="color: #a0a0a0;">sv_cheats 0 or 1</p></th>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>Data Packs</p></td>
+						</tr>
+						<tr style="margin-top: 32px">
+	
+							<th class="mc-button" style="width: 300px;"><p>Game Rules</p></td>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;"><p>More World Options...</p></td>
+						</tr>
+					</tbody>
+					<tbody style="position: absolute; bottom: 0;margin-bottom: 16px;">
+						<tr>
+							<th class="mc-button" style="width: 300px;"><p>Create New World</p></td>
+							<th class="buttonblank"></td>
+							<th class="mc-button" style="width: 300px;" onclick="$('.worldcreationmenu').hide()"><p>Cancel</p></td>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="gamesettingsmenu" style="display: block;">
+			<div class="container">
+				<table class="worldnamebox">
+				<tbody>
+						<td><p style="color: white;">Edit World</p></td>
+						<td style="margin: 0;"><p>World Name</p></td>
+						<td><input type="text" class="search" ng-tranny="'{{map}}'" disabled /></td>
+					</tr>
+				</tbody>
+				</table>
+				<table class="buttonscontainer">
+				<tbody style="margin: 0 auto;">
+					<tr style="flex-direction: column; height: unset;">
+						<td id="changecategory" class="mc-button" style="width: 396px;" ng-click="SwitchCategory(category.category)">
+							<ul id="listofcategories">
+								<li class="noisy category {{IfElse( category.category == CurrentCategory, 'active', '' )}}" ng-repeat="category in MapList | orderBy:'order'" ng-hide="CountFiltered(category.maps) == 0">
+									<div class='name'>{{category.category}}</div>
+								</li>
+							</ul>
+						</td>
+						<td id="changecategory" class="mc-button" style="width: 396px;">
+							<ul id="listofcategories">
+								<li ng-repeat="ply in Players" ng-click="UpdateMaxPlayers( ply )" ng-tranny="ply.label">
+									{{ply.label}}
+								</li>
+							</ul>
+						</td>
+						<td class="mc-button" style="width: 396px;">
+							<p ng-Tranny="'lan_server'"></p>
+						</td>
+						<td class="mc-button" style="width: 396px;">
+							<p ng-Tranny="'p2p_server'"></p>
+						</td>
+						<td class="mc-button" style="width: 396px;">
+							<p ng-Tranny="'p2p_server_friendsonly'"></p>
+						</td>
+						<td class="mc-button" style="width: 396px;">
+							<p>Export World Generation Settings</p>
+						</td>
+						<td style="flex-direction: row;">
+							<div class="mc-button" onclick="$('.gamesettingsmenu').hide()" style="width: 194px;">
+								<p>Save</p>
+							</div>
+							<div class="mc-button" onclick="$('.gamesettingsmenu').hide()" style="width: 194px; margin-left: 8px;">
+								<a>Cancel</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="maplist icons">
+	
+			<div class="controls">
+	
+				
+				<div class="maplist-title">
+					<p>Select Map</p>
+				</div>
+	
+				<div class='search'>
+					<input type="text" class="search" ng-model="SearchText" autofocus />
+				</div>
+			</div>
+			<div class="scrollable">
+	
+				<ul class="category" ng-repeat="category in MapList | orderBy:'order'" ng-hide="category.maps.length == 0">
+	
+					<li>{{category.category}}</li>
+	
+					<li ng-click="ClickMap( map )" class="icon mapicon {{MapClass( map )}}" ng-repeat="map in category.maps | orderBy:'toString()' | mapFilter:SearchText" >
+						<img ng-click="ClickMap( map )" ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
+						<span>{{map}}</span>
+						<img ng-click="FavMap( map )" class="{{FavMapClass( map )}} {{FavMapHover( map )}}" src="img/empty.png" />
+					</li>
+	
+				</ul>
+	
+			</div>
+			<div class="gamesettings">
+				<table style="margin: 16 auto;width: fit-content;">
+					<tbody style="margin: 0;">
+						<tr>
+							<th class="mc-button" ng-Tranny="'start_game'" ng-click="StartGame()" style="width: 300px">
+								<p>Play Selected World</p>
+							</th>
+						</tr>
+						<td onclick="$('.gamesettingsmenu').show()" class="mc-button" style="width: 144px">
+							<p>Edit</p>
+						</td>
+						<td class="mc-button" style="width: 144px; margin-left: 8px;">
+							<p>Delete</p>
+						</td>
+					</tr>
+					</tbody>
+					<tbody style="margin-left: 16px;">
+						<tr>
+							<th onclick="$('.worldcreationmenu').show()" class="mc-button" style="width: 300px">
+								<p>Create New World</p>
+							</th>
+						</tr>
+						<tr>
+							<td class="mc-button" style="width: 144px">
+								<p>Re-Create</p>
+							</td>
+							<td class="mc-button" style="width: 144px; margin-left: 8px;">
+								<a ng-href="#/">Cancel</a>
+							</td>
+						</tr>
+	
+					</tbody>
+				</table>
+			</div>
+			<gamesettings style="display: none;">
+	
+			<div class="dropdown" style="margin: 10px;">
+	
+				<div class="label" onclick="$(this).siblings('.contents').toggle()">
+					<span ng-tranny="MaxPlayersOption.label">{{MaxPlayersOption.label}}</span>
+					<i class='caret'></i>
+				</div>
+				<div class="contents" onclick="$(this).hide()">
+					<div ng-repeat="ply in Players" ng-click="UpdateMaxPlayers( ply )" ng-tranny="ply.label">
+					{{ply.label}}
+					</div>
+				</div>
+			</div>
+	
+			<div class="scrollable" style="margin: 10px; bottom: 80px; top: 32px">
+	
+				<div class='control' ng-show="MaxPlayers > 1">
+					<label ng-Tranny="'server_name'"></label>
+					<input type="text" ng-model="ServerSettings.hostname" />
+				</div>
+	
+				<div class='control' ng-show="MaxPlayers > 1">
+					<input type="checkbox" ng-model="ServerSettings.sv_lan" ng-bind="CheckboxCheck()" />
+					<label ng-Tranny="'lan_server'"></label>
+				</div>
+	
+				<div class='control' ng-show="MaxPlayers > 1">
+					<input type="checkbox" ng-model="ServerSettings.p2p_enabled" ng-bind="CheckboxCheck()" />
+					<label ng-Tranny="'p2p_server'"></label>
+				</div>
+	
+				<div class='control' ng-show="MaxPlayers > 1">
+					<input type="checkbox" ng-model="ServerSettings.p2p_friendsonly" id="p2p_friendsonly" />
+					<label ng-Tranny="'p2p_server_friendsonly'"></label>
+				</div>
+	
+				<div class='control control-text' ng-repeat="s in ServerSettings.Text" ng-show="MaxPlayers > 1 || s.Singleplayer">
+					<label ng-Tranny="s.text"></label>
+					<input type="text" ng-model="s.Value"/>
+				</div>
+	
+				<div class='control control-numeric' ng-repeat="s in ServerSettings.Numeric" ng-show="MaxPlayers > 1 || s.Singleplayer">
+					<label ng-Tranny="s.text"></label>
+					<input type="text" ng-model="s.Value"/>
+				</div>
+	
+				<div class='control' ng-repeat="s in ServerSettings.CheckBox" ng-show="MaxPlayers > 1 || s.Singleplayer">
+					<input type="checkbox" ng-model="s.Value" />
+					<label ng-Tranny="s.text"></label>
+				</div>
+	
+			</div>
+	
+	
+		<bottom>
+			<button class='btn-primary' ng-Tranny="'start_game'" ng-click="StartGame()">...</button>
+		</bottom>
+	
+			</gamesettings>
+	
+		</div>
+	
+	
+	</div>
 	
 	<!--
 		external ENDS

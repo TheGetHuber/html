@@ -441,6 +441,9 @@ th {
 	background: none;
 	text-align: center;
 }
+#listofcategories{
+	list-style: none;
+}
 
 /* ================================================================================ */
 /* ======================= Minecraft button flexable styles ======================= */

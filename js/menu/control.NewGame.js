@@ -270,6 +270,27 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 		}
 	}
 
+	//mine shit
+	
+	let list = document.querySelectorAll("#listofcategories")
+    let button = document.querySelectorAll("#changecategory")
+
+    console.log(list.childElementCount)
+	button.forEach(function(butt){
+		butt.addEventListener("click", function(){
+			list.forEach(function(lst){	
+				for(j = 0; j < lst.childElementCount; j++){
+					if(lst.children[j].style.display != "none"){
+						$(lst.children[j]).hide()
+						$(lst.children[(j+1)%lst.childElementCount]).show()
+						break
+					}
+				}
+			})
+		})
+	})
+
+
 }
 
 function SetLastMap( map, category )
