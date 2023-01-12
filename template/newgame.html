@@ -38,13 +38,12 @@
                     <tr>
                         <th class="mc-button" style="width: 300px;"><p>Create New World</p></td>
                         <th class="buttonblank"></td>
-                        <th class="mc-button" style="width: 300px;"><p>Cancel</p></td>
+                        <th class="mc-button" style="width: 300px;" onclick="$('.worldcreationmenu').hide()"><p>Cancel</p></td>
                 </tbody>
             </table>
         </div>
     </div>
-
-    <div class="gamesettingsmenu" style="display: none;">
+    <div class="gamesettingsmenu" style="display: block;">
         <div class="container">
             <table class="worldnamebox">
             <tbody>
@@ -80,11 +79,11 @@
                         <p>Export World Generation Settings</p>
                     </td>
                     <td style="flex-direction: row;">
-                        <div class="mc-button" id="gs-savebutton" style="width: 194px;">
+                        <div class="mc-button" onclick="$('.gamesettingsmenu').hide()" style="width: 194px;">
                             <p>Save</p>
                         </div>
-                        <div class="mc-button" style="width: 194px; margin-left: 8px;">
-                            <a ng-href="#/">Cancel</a>
+                        <div class="mc-button" onclick="$('.gamesettingsmenu').hide()" style="width: 194px; margin-left: 8px;">
+                            <a>Cancel</a>
                         </div>
                     </td>
                 </tr>
@@ -129,8 +128,8 @@
                             <p>Play Selected World</p>
                         </th>
                     </tr>
-                    <td class="mc-button" style="width: 144px">
-                        <p id="gs-editbutton">Edit</p>
+                    <td onclick="$('.gamesettingsmenu').show()" class="mc-button" style="width: 144px">
+                        <p>Edit</p>
                     </td>
                     <td class="mc-button" style="width: 144px; margin-left: 8px;">
                         <p>Delete</p>
@@ -139,7 +138,7 @@
                 </tbody>
                 <tbody style="margin-left: 16px;">
                     <tr>
-                        <th ng-Tranny="'start_game'" ng-click="StartGame()" class="mc-button" style="width: 300px">
+                        <th onclick="$('.worldcreationmenu').show()" class="mc-button" style="width: 300px">
                             <p>Create New World</p>
                         </th>
                     </tr>
@@ -219,4 +218,4 @@
     </div>
 
 
-    </div>
+</div>

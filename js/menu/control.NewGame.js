@@ -270,31 +270,6 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 		}
 	}
 
-	//mine shit
-	
-	let list = document.querySelector("#listofcategories")
-    let button = document.querySelector("#changecategory")
-	let savebutton = document.querySelector("#gs-savebutton")
-	let editbutton = document.querySelector("#gs-editbutton")
-	let gamesettingsmenu = document.querySelector(".gamesettingsmenu")
-
-    console.log(list.childElementCount)
-    button.addEventListener("click", function(){
-        for(let i = 0; i < list.childElementCount; i++){
-        if(list.children[i].style.display != "none"){
-            list.children[i].style.display = "none"
-            list.children[(i+1)%list.childElementCount].style.display = "block"
-            break
-        }
-    }})
-	savebutton.addEventListener("click", function(){
-		gamesettingsmenu.style.display = "none"
-	})
-	editbutton.addEventListener("click", function(){
-		gamesettingsmenu.style.display = "block"
-	})
-
-
 }
 
 function SetLastMap( map, category )
