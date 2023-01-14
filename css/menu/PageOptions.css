@@ -351,6 +351,12 @@ div.centermessage .subbed:hover {
 	background: #cadeca !important;
 }
 
+/*
+	//
+	// Main menu styles
+	//
+*/
+
 .title{
 	font-size: 24pt;
 	text-shadow: 4px 4px 0px rgb(64,64,0);
