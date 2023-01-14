@@ -62,23 +62,24 @@
 			// Main block
 			//
 		-->
-		<div class="mainblock">
-			<div class="innerpage" ng-hide="CurrentGamemode != null">
+		<div class="mainblock scrollable">
+			<div class="innerpage" ng-hide="CurrentGamemode != null" style="">
 
-				<div class='server_gamemodes whiterounded scrollable'>
-
-					<div class='gamemode {{gamemode.element_class}}' ng-repeat="gamemode in GamemodeList | filter: gamemodeFilter | orderBy:[GMSort, '-(num_players)', 'name' ]" ng-click="SelectGamemode( gamemode )">
-
-						<img src='../gamemodes/{{gamemode.name}}/icon24.png' onerror="MissingGamemodeIcon( this )"/>
-
-						<div class='stats'>{{gamemode.num_players}} <span ng-tranny="gamemode.num_players == 1 && 'servers_player_on' || 'servers_players_on'"></span> {{gamemode.num_servers}} <span ng-tranny="gamemode.num_servers == 1 && 'servers_server' || 'servers_servers'"></span></div>
-						<div class='name'>
-							{{GamemodeName(gamemode)}}<tag ng-show="gamemode.info && gamemode.info.tag" ng-Tranny="'gmfltr_hide_' + gamemode.info.tag">{{gamemode.info.tag}}</tag>
-						</div>
-
-						<span class='installgamemode' ng-show="ShouldShowInstall( gamemode )" ng-click="InstallGamemode( gamemode );$event.stopPropagation()">&nbsp;</span>
-
-					</div>
+				<div class='server_gamemodes'>
+					<ul>
+						<li class='gamemode {{gamemode.element_class}}' ng-repeat="gamemode in GamemodeList | filter: gamemodeFilter | orderBy:[GMSort, '-(num_players)', 'name' ]" ng-click="SelectGamemode( gamemode )">
+	
+							<img src='../gamemodes/{{gamemode.name}}/icon24.png' onerror="MissingGamemodeIcon( this )"/>
+	
+							<div class='stats'>{{gamemode.num_players}} <span ng-tranny="gamemode.num_players == 1 && 'servers_player_on' || 'servers_players_on'"></span> {{gamemode.num_servers}} <span ng-tranny="gamemode.num_servers == 1 && 'servers_server' || 'servers_servers'"></span></div>
+							<div class='name'>
+								{{GamemodeName(gamemode)}}<tag ng-show="gamemode.info && gamemode.info.tag" ng-Tranny="'gmfltr_hide_' + gamemode.info.tag">{{gamemode.info.tag}}</tag>
+							</div>
+	
+							<span class='installgamemode' ng-show="ShouldShowInstall( gamemode )" ng-click="InstallGamemode( gamemode );$event.stopPropagation()">&nbsp;</span>
+	
+						</li>
+					</ul>
 
 				</div>
 
@@ -186,6 +187,21 @@
 			//
 		-->
 		<div class="footerblock">
-			
+			<table style="flex-direction: column;width: 616px;margin-top: 16px;">
+				<thead>
+					<tr>
+						<td class="mc-button" style="width: 200px;margin-left: 0;"><p>Join Server</p></td>
+						<td class="mc-button" style="width: 200px;"><p>Direct Connect</p></td>
+						<td class="mc-button" style="width: 200px;margin-right: 0;"><p>Add Server</p></td>
+					</tr>
+				<tbody>
+					<tr>
+						<td class="mc-button" style="width: 140px; margin-left: 0;"><p>Edit</p></td>
+						<td class="mc-button" style="width: 140px;"><p>Delete</p></td>
+						<td class="mc-button" style="width: 140px;"><p>Refresh</p></td>
+						<td class="mc-button" style="width: 148px; margin-right: 0;" ng-href="#/"><p>Cancel</p></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 </div>

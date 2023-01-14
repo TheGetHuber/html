@@ -1,8 +1,8 @@
 @keyframes splash{ /*TODO: fix the optimisation*/
     from {
-        font-size: xx-large;
+        scale: 1;
     }
     to {
-        font-size: x-large;
+        scale: 1.4;
     }
 }

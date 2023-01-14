@@ -1,63 +1,61 @@
-	<div class="page" ng-controller="ControllerMain">
+<div class="page" ng-controller="ControllerMain" style="background: none">
 
-		<div class="options">
-			<div class="title">
-				<div class="splashcontainer">
-					<p class="titlesplash">Error!</p>
-				</div>
-				<img class="titleimage" src='img/minecraft/mc-logotitle.png' />
+	<div class="options">
+		<div class="title">
+			<div class="splashcontainer">
+				<p class="titlesplash">Error!</p>
 			</div>
-			<table style="margin: 19vh 0 0 -48px;flex-direction: row;width: 496px;">
-				<thead style="margin-right: 6px; margin-top: 173px;">
-					<tr>
-						<td class="mc-button" style="width: 40px;"><a ng-href="#/saves/"></a></td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th class="mc-button" style="width: 398px;"><a ng-href="#/newgame/" ng-Tranny="'new_game'"></a></th>
-					</tr>
-					<tr>
-						<th class="mc-button" style="width: 398px;"><a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a></th>
-					</tr>
-					<tr>
-						<td class="mc-button" style="width: 194px"><a ng-href="#/addons/" ng-Tranny="'addons'"></a></td>
-						<td class="buttonblank"></td>
-						<td class="mc-button" style="width: 194px"><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></td>
-					
-					</tr>
-					<tr class="optionquitmenu">
-						<td class="mc-button" style="width: 194px"><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></td>
-						<td class="buttonblank"></td>
-						<td class="mc-button" style="width: 194px"><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a></td>
-					</tr>
-					<tr>
-						<td class="mc-button" style="width: 194px; margin-top: 15px;" ng-click="ToggleProblems()">
-							<span ng-Tranny="'problems'"></span>
-							<number class="{{IfElse( ProblemSeverity > 0, 'severity' + ProblemSeverity, '' )}}">{{ProblemCount}}</number>
-						</td>
-					</tr>
-				</tbody>
-				<thead style="margin-left: 6px; margin-top: 173px;">
-					<tr>
-						<td class="mc-button" style="width: 40px;"><a ng-href="#/demos/"></a></td>
-					</tr>
-				</thead>
-			</table>
-	
+			<img class="titleimage" src='img/minecraft/mc-logotitle.png' />
 		</div>
-	
-		<div class="news" ng-hide="NewsList.length == 0">
-			<div class="news_item" style="{{NewsItemBackground( CurrentNewsItem.HeaderImage )}}" ng-hide="HideNews">
-				<div>
-					<span ng-click="OpenInSteam( CurrentNewsItem.Url )">{{CurrentNewsItem.Title}}</span>
-					<font>{{CurrentNewsItem.SummaryHtml}}</font>
-				</div>
-			</div>
-			<div class='news_buttons'>
-				<div ng-click="ToggleNewsList()" ng-hide="HideNews || AnyNewNewsItems"><img src="../materials/icon16/cross.png"></div>
-				<div class="{{IfElse( NewsItem.Url == CurrentNewsItem.Url, 'selected', '' )}} {{NewsItemClass( NewsItem )}}" ng-repeat="NewsItem in NewsList | orderBy: 'Date'" ng-click="SelectItem(NewsItem)"></div>
+		<table style="margin: 170px 0 0 -46px;flex-direction: row;width: 496px;">
+			<thead style="margin-right: 6px; margin-top: 171px;">
+				<tr>
+					<td class="mc-button" style="width: 40px;"><a ng-href="#/saves/"></a></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="mc-button" style="width: 400px;"><a ng-href="#/newgame/" ng-Tranny="'new_game'"></a></td>
+				</tr>
+				<tr>
+					<td class="mc-button" style="width: 400px;"><a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a></td>
+				</tr>
+				<tr>
+					<td class="mc-button" style="width: 196px; margin-left: 0"><a ng-href="#/addons/" ng-Tranny="'addons'"></a></td>
+					<td class="mc-button" style="width: 196px; margin-right: 0"><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></td>
+				
+				</tr>
+				<tr class="optionquitmenu">
+					<td class="mc-button" style="width: 196px; margin-left: 0"><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></td>
+					<td class="mc-button" style="width: 196px; margin-right: 0;"><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a></td>
+				</tr>
+				<tr>
+					<td class="mc-button" style="width: 196px; margin-top: 15px;" ng-click="ToggleProblems()">
+						<span ng-Tranny="'problems'"></span>
+						<number class="{{IfElse( ProblemSeverity > 0, 'severity' + ProblemSeverity, '' )}}">{{ProblemCount}}</number>
+					</td>
+				</tr>
+			</tbody>
+			<thead style="margin-left: 6px; margin-top: 171px;">
+				<tr>
+					<td class="mc-button" style="width: 40px;"><a ng-href="#/demos/"></a></td>
+				</tr>
+			</thead>
+		</table>
+
+	</div>
+
+	<div class="news" ng-hide="NewsList.length == 0">
+		<div class="news_item" style="{{NewsItemBackground( CurrentNewsItem.HeaderImage )}}" ng-hide="HideNews">
+			<div>
+				<span ng-click="OpenInSteam( CurrentNewsItem.Url )">{{CurrentNewsItem.Title}}</span>
+				<font>{{CurrentNewsItem.SummaryHtml}}</font>
 			</div>
 		</div>
-	
-	</div>	
+		<div class='news_buttons'>
+			<div ng-click="ToggleNewsList()" ng-hide="HideNews || AnyNewNewsItems"><img src="../materials/icon16/cross.png"></div>
+			<div class="{{IfElse( NewsItem.Url == CurrentNewsItem.Url, 'selected', '' )}} {{NewsItemClass( NewsItem )}}" ng-repeat="NewsItem in NewsList | orderBy: 'Date'" ng-click="SelectItem(NewsItem)"></div>
+		</div>
+	</div>
+
+</div>
