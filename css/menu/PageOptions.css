@@ -384,9 +384,9 @@ div.centermessage .subbed:hover {
 
 table {
 	color: white;
-	width: 496px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	margin: 0 auto;
 }
 table *{
 	padding: 0;
@@ -480,7 +480,6 @@ th {
 .upperblock{
 	min-height: 64px;
 	width: 100%;
-	background: url(../../img/minecraft/options_background.png);
 	backdrop-filter: brightness(25%);
 }
 /*	
@@ -490,11 +489,7 @@ th {
 */
 .mainblock{
 	width: 100%;
-	height: inherit;
-	background: url(../../img/minecraft/options_background.png);
-	backdrop-filter: brightness(20%);
-	border-top: 8px solid black;
-	border-bottom: 8px solid black;
+	backdrop-filter: brightness(13%);
 }
 /*	
 	//
@@ -502,8 +497,7 @@ th {
 	//
 */
 .footerblock{
-	min-height: 64px;
+	min-height: 130px;
 	width: 100%;
-	background: url(../../img/minecraft/options_background.png);
 	backdrop-filter: brightness(25%);
 }

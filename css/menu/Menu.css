@@ -55,6 +55,7 @@ DIV.page {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	background: url(../../img/minecraft/options_background.png);
 }
 
 UL.category {

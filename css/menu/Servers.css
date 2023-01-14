@@ -310,7 +310,6 @@ H1.menuheader
 	text-shadow: 2px 2px 1px black;
 	width: 100%;
 	height: 100%;
-	backdrop-filter: brightness(25%);
 	text-align: center;
 }
 
@@ -504,7 +503,7 @@ SPAN.installgamemode:hover
 }
 
 /* Server search box */
-.controls .searchbox,
+.controls .searchbox
 {
 	border-radius: 2px;
 	margin-top: 4px;
