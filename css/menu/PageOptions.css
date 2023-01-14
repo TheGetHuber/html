@@ -16,11 +16,6 @@ DIV.page DIV.options
 
 DIV.page DIV.innerpage
 {
-	position: absolute;
-	left: 320px;
-	top: 16px;
-	bottom: 16px;
-	right: 16px;
 	padding: 16px;
 	padding-top: 0;
 }
@@ -475,4 +470,40 @@ th {
 	margin: 0 auto;
 	margin-top: 19px;
 	font-weight: normal;
+}
+/*	
+	//
+	// Upper block styles
+	//
+*/
+
+.upperblock{
+	min-height: 64px;
+	width: 100%;
+	background: url(../../img/minecraft/options_background.png);
+	backdrop-filter: brightness(25%);
+}
+/*	
+	//
+	// Main block styles
+	//
+*/
+.mainblock{
+	width: 100%;
+	height: inherit;
+	background: url(../../img/minecraft/options_background.png);
+	backdrop-filter: brightness(20%);
+	border-top: 8px solid black;
+	border-bottom: 8px solid black;
+}
+/*	
+	//
+	// Footer block styles
+	//
+*/
+.footerblock{
+	min-height: 64px;
+	width: 100%;
+	background: url(../../img/minecraft/options_background.png);
+	backdrop-filter: brightness(25%);
 }

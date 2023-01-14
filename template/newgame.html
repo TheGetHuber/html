@@ -97,6 +97,11 @@
     </div>
     <div class="maplist icons">
 
+        <!--
+            //
+            // Upper block
+            //
+        -->
         <div class="controls">
 
             
@@ -108,6 +113,11 @@
                 <input type="text" class="search" ng-model="SearchText" autofocus />
             </div>
         </div>
+        <!--
+            //
+            // Main block
+            //
+        -->
         <div class="scrollable">
 
             <ul class="category" ng-repeat="category in MapList | orderBy:'order'" ng-hide="category.maps.length == 0">
@@ -123,6 +133,12 @@
             </ul>
 
         </div>
+        
+        <!--
+            //
+            // Footer block
+            //
+        -->
         <div class="gamesettings">
             <table style="margin: 16 auto;width: fit-content;">
                 <tbody style="margin: 0;">

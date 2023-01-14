@@ -305,10 +305,13 @@ H1 small
 
 H1.menuheader
 {
+	margin: 0;
 	color: white;
-	margin-bottom: 0;
 	text-shadow: 2px 2px 1px black;
-
+	width: 100%;
+	height: 100%;
+	backdrop-filter: brightness(25%);
+	text-align: center;
 }
 
 H1.menuheader small
