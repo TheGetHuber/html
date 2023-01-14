@@ -63,17 +63,21 @@
                             </li>
                         </ul>
                     </td>
-                    <td class="mc-button" style="width: 396px;">
-                        <p>Singleplayer</p>
+                    <td id="changecategory" class="mc-button" style="width: 396px;">
+                        <ul id="listofcategories">
+                            <li ng-repeat="ply in Players" ng-click="UpdateMaxPlayers( ply )" ng-tranny="ply.label">
+                                {{ply.label}}
+                            </li>
+                        </ul>
                     </td>
                     <td class="mc-button" style="width: 396px;">
-                        <p>Make Backup</p>
+                        <p ng-Tranny="'lan_server'"></p>
                     </td>
                     <td class="mc-button" style="width: 396px;">
-                        <p>Open Backups Folder</p>
+                        <p ng-Tranny="'p2p_server'"></p>
                     </td>
                     <td class="mc-button" style="width: 396px;">
-                        <p>Optimize World</p>
+                        <p ng-Tranny="'p2p_server_friendsonly'"></p>
                     </td>
                     <td class="mc-button" style="width: 396px;">
                         <p>Export World Generation Settings</p>
@@ -91,7 +95,6 @@
             </table>
         </div>
     </div>
-
     <div class="maplist icons">
 
         <div class="controls">
@@ -112,7 +115,7 @@
                 <li>{{category.category}}</li>
 
                 <li ng-click="ClickMap( map )" class="icon mapicon {{MapClass( map )}}" ng-repeat="map in category.maps | orderBy:'toString()' | mapFilter:SearchText" >
-                    <img ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
+                    <img ng-click="ClickMap( map )" ng-src="{{MapIcon( map, category.category )}}" class="thumbnail" /><br />
                     <span>{{map}}</span>
                     <img ng-click="FavMap( map )" class="{{FavMapClass( map )}} {{FavMapHover( map )}}" src="img/empty.png" />
                 </li>
