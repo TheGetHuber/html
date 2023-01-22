@@ -82,7 +82,6 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 	{
 		$scope.CurrentCategory = cat;
 	}
-
 	$scope.MapClass = function( m )
 	{
 		if ( m == $rootScope.Map )
@@ -179,7 +178,7 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 
 		if ( $rootScope.MaxPlayers > 0 )
 		{
-			lua.Run( 'RunConsoleCommand( "sv_cheats", "0" )' );
+			lua.Run( 'RunConsoleCommand( "sv_cheats", "'+$rootScope.svcheatsraw+'" )' );
 			lua.Run( 'RunConsoleCommand( "commentary", "0" )' );
 		}
 
@@ -270,26 +269,53 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 		}
 	}
 
-	//mine shit
+	// ======================================================================================================================================================
+	// =============================================================MINECRAFT MAIN MENU JS SCRIPTS===========================================================
+	// ======================================================================================================================================================
+
+	//
+	// sv_cheats controller
+	// changing sv_cheats on startup of the server
+	//
+
+	let svcheatsmode = false
+	$scope.changesvcheats = function(){
+		svcheatsmode = !svcheatsmode
+		let svcheats = document.querySelector("#svcheats") // connecting the <p></p> of the button(!), not the button itself
+		if(svcheatsmode == false){
+			svcheats.innerHTML = "Allow Cheats: OFF"
+			$rootScope.svcheatsraw = 0
+		}else{
+			svcheats.innerHTML = "Allow Cheats: ON"
+			$rootScope.svcheatsraw = 1
+		}
+	}
+
+	//
+	// Player count controller
+	// changes player count for the server
+	//
+
+	let playerstext = document.querySelector("#playerscount")
+	$scope.UpdateMaxPlayers(1)
+
+	// i could just implement this part of code in $scope.UpdateMaxPlayers
+	// but i dont want to break something other with my carb claws :)
 	
-	let list = document.querySelectorAll("#listofcategories")
-    let button = document.querySelectorAll("#changecategory")
+	$scope.changeplayerscount = function(){
 
-    console.log(list.childElementCount)
-	button.forEach(function(butt){
-		butt.addEventListener("click", function(){
-			list.forEach(function(lst){	
-				for(j = 0; j < lst.childElementCount; j++){
-					if(lst.children[j].style.display != "none"){
-						$(lst.children[j]).hide()
-						$(lst.children[(j+1)%lst.childElementCount]).show()
-						break
-					}
-				}
-			})
-		})
-	})
+		if($scope.MaxPlayersOption < 64){
+			$scope.UpdateMaxPlayers($scope.MaxPlayersOption * 2)
+		}else{
+			$scope.UpdateMaxPlayers(1)
+		}
 
+		if($scope.MaxPlayersOption == 1){
+			playerstext.innerHTML = "Player Count: Singleplayer"
+		}else{
+			playerstext.innerHTML = "Player Count: "+$scope.MaxPlayersOption
+		}
+	}
 
 }
 
