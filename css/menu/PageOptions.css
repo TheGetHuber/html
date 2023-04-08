@@ -391,7 +391,7 @@ div.centermessage .subbed:hover {
 table {
 	color: white;
 	display: flex;
-	flex-direction: column;
+	/*flex-direction: column;*/
 	margin: 0 auto;
 }
 table *{
