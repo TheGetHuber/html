@@ -80,16 +80,6 @@ DIV.page DIV.options UL.submenu LI
 	margin-bottom: -4px;
 }
 
-DIV.page DIV.options A:hover
-{
-	color: #ffa;
-}
-
-DIV.page DIV.options.active, DIV.page DIV.options A.active
-{
-	color: #ff5;
-}
-
 DIV.page DIV.options .search_bar
 {
 	padding: 2px 4px;
@@ -415,7 +405,6 @@ DIV.page DIV.options a {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-	margin-top: 19px;
 	font-weight: normal;
 }
 DIV.page DIV.options number {
@@ -467,8 +456,8 @@ th {
 .mc-button * {
 	color: white;
     margin: 0 auto;
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	margin-top: 20px;
 	font-size: medium;
 }
@@ -479,9 +468,11 @@ th {
 
 .mc-button a{
 	margin: 0 auto;
-	margin-top: 19px;
 	font-weight: normal;
+	display: flex;
+	align-items: center;
 }
+
 /*	
 	//
 	// Upper block styles
