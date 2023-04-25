@@ -4,6 +4,7 @@
 	<title>Garry's Mod Main Menu</title>
 
 	<link rel="stylesheet" type="text/css" href="css/minecraft/splashanimation.css" />
+	<link rel="stylesheet" type="text/css" href="css/minecraft/ingame_menu.css" />
 	<link rel="stylesheet" type="text/css" href="css/menu/Menu.css" />
 	<link rel="stylesheet" type="text/css" href="css/menu/NavBar.css" />
 	<link rel="stylesheet" type="text/css" href="css/menu/PageOptions.css" />
@@ -40,17 +41,6 @@
 </head>
 
 <body ng-app="MenuApp" ng-controller="MenuController">
-	
-	<!--
-		external BEGINS
-	-->
-	
-	
-	
-	<!--
-		external ENDS
-	-->
-
 
 <div id="version" ng-click="ShowNews()" ng-show="Branch"><span ng-show="Branch != 'unknown'">You are on the {{Branch}} branch. Click here to find out more. ( </span>{{Version}}<span ng-show="Branch != 'unknown'"> )</span></div>
 

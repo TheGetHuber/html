@@ -404,7 +404,7 @@ tr {
 	margin-top: 10px;
 }
 td {
-	width: 194px;
+	width: 100%;
 	height: 95%;
 	text-align: center;
 	display: flex;
@@ -506,4 +506,21 @@ th {
 	min-height: 130px;
 	width: 100%;
 	backdrop-filter: brightness(25%);
+}
+
+/* ================================================================================ */
+/* ================================= In-game menu ================================= */
+/* ====================== Bunch of classes for in-game menu ======================= */
+/* ================================================================================ */
+
+.ingamemenu{
+    position: absolute;
+    background-color: #000000aa;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.ingametitle{
+    width: 100vw;
 }

@@ -16,13 +16,13 @@
                 </thead>
                 <tbody>
                     <tr style="margin-top: 32px">
-                        <th class="mc-button" style="width: 300px;"><p>Game Mode: Sandbox</p></th>
+                        <th class="mc-button" style="width: 300px;" ng-click="ChangeGamemode()"><p>Game Mode: {{gamemode_name}}</p></th>
                         <th style="position: absolute;margin: 42px 0 0 10px;text-align: left;"><p style="color: #a0a0a0;">Build buildings, kill NPCs, DM with firends, spam props and do fun stuff!</p></th>
                         <th class="buttonblank"></td>
-                        <th class="mc-button" style="width: 300px;"><p>Player Count: 1</p></td>
+                        <th class="mc-button" style="width: 300px;" ng-click="changeplayerscount()"><p id="playerscount">Player Count: Singleplayer</p></td>
                     </tr>
                     <tr style="margin-top: 62px">
-                        <th class="mc-button" style="width: 300px;"><p>Allow Cheats: OFF</p></td>
+                        <th class="mc-button" style="width: 300px;" ng-click="changesvcheats()"><p id="svcheats">Allow Cheats: OFF</p></td>
                         <th style="position: absolute;margin: 40px 0 0 10px;text-align: left;"><p style="color: #a0a0a0;">sv_cheats 0 or 1</p></th>
                         <th class="buttonblank"></td>
                         <th class="mc-button" style="width: 300px;"><p>Data Packs</p></td>
@@ -143,7 +143,7 @@
             <table style="margin: 16 auto;width: fit-content;">
                 <tbody style="margin: 0;">
                     <tr>
-                        <th class="mc-button" ng-Tranny="'start_game'" ng-click="StartGame()" style="width: 300px">
+                        <th class="mc-button" ng-Tranny="'start_game'" ng-click="StartGame()" style="width: 300px;">
                             <p>Play Selected World</p>
                         </th>
                     </tr>

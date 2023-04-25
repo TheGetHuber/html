@@ -132,7 +132,7 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 		}
 
 		// Hopefully this also improves performance of the first click on "Start new game".
-		if ( !IN_ENGINE || $scope.CurrentCategory != cat ) return "img/downloading.png"
+		if ( !IN_ENGINE || $scope.CurrentCategory != cat ) return "img/minecraft/unknownicon.png"
 
 		return "asset://mapimage/" + m;
 	}

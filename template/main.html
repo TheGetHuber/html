@@ -1,6 +1,6 @@
 <div class="page" ng-controller="ControllerMain" style="background: none">
 
-	<div class="options">
+	<div class="options" ng-show="!InGame">
 		<div class="title">
 			<div class="splashcontainer">
 				<p class="titlesplash">Error!</p>
@@ -45,7 +45,35 @@
 
 	</div>
 
-	<div class="news" ng-hide="NewsList.length == 0">
+	<div class="ingamemenu" ng-show="InGame">
+		<table style="flex-direction: column;width: 408px;">
+			<thead style="margin-top: 70px;text-align: center;">
+				<tr><td><p class="ingametitle">Menu</p></td></tr>
+			</thead>
+			<tbody style="margin-top: 140px;">
+				<tr>
+					<td><div class="mc-button" style="width: 408px;"><a ng-click="BackToGame()" ng-Tranny="'resume_game'"></a></div></td>
+				</tr>
+				<tr>
+					<td><div class="mc-button" style="width: 196px;"><a ng-href="#/addons/" ng-Tranny="'addons'"></a></div></td>
+					<td><div class="mc-button" style="width: 196px;margin-left: 8px;"><a ng-href="#/dupes/" ng-Tranny="'dupes'"></a></div></td>
+				</tr>
+				<tr>
+					<td><div class="mc-button" style="width: 196px;"><a ng-href="#/saves/" ng-Tranny="'saves'"></a></div></td>
+					<td><div class="mc-button" style="width: 196px;margin-left: 8px;"><a ng-href="#/demos/" ng-Tranny="'demos'"></a></div></td>
+				</tr>
+				<tr>
+					<td><div class="mc-button" style="width: 196px;"><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a></div></td>
+					<td><div class="mc-button" style="width: 196px;margin-left: 8px;"></div></td>
+				</tr>
+				<tr>
+					<td><div class="mc-button" style="width: 408px;"><a ng-click="MenuOption( this, 'engine disconnect');" ng-Tranny="'disconnect'"></a></div></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="news" ng-hide="NewsList.length == 0" ng-show="!InGame">
 		<div class="news_item" style="{{NewsItemBackground( CurrentNewsItem.HeaderImage )}}" ng-hide="HideNews">
 			<div>
 				<span ng-click="OpenInSteam( CurrentNewsItem.Url )">{{CurrentNewsItem.Title}}</span>
