@@ -445,6 +445,11 @@ th {
 #listofcategories{
 	list-style: none;
 }
+.wrapper{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
 
 /* ================================================================================ */
 /* ======================= Minecraft button flexable styles ======================= */
@@ -523,4 +528,45 @@ th {
 
 .ingametitle{
     width: 100vw;
+}
+
+/* ================================================================================ */
+/* ================================== Addon menu ================================== */
+/* ============================ Styles for addon menu ============================= */
+/* ================================================================================ */
+
+#addonlist{
+	margin: 12px;
+	height: 100vh;
+}
+
+.addondescription{
+	width: inherit;
+	height: 100%;
+	margin: 12px 12px 12px 0px;
+	display: flex;
+	flex-direction: column;
+}
+.addoninfo{
+	width: 100%;
+	height: inherit;
+	background-color: #00000055;
+}
+.addontools{
+	min-height: 52px;
+	width: 100%;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: end;
+}
+.addontools div{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.addontabmenu{
+	min-height: 162px; 
+	display: flex; 
+	flex-direction: column;
+	margin-bottom: 23px;
 }

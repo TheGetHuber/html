@@ -1,17 +1,11 @@
 
 workshopicon
 {
-	width: 200px;
-	height: 200px;
+	width: 204px;
+	height: 52px;
 	display: inline-block;
-	margin: 10px;
 	position: relative;
 	overflow: hidden;
-	background-color: #666;
-	background-position: center;
-	-webkit-box-shadow: 0px 0px 1px 1px rgba( 0, 0, 0, 0.3 );
-	border-radius: 3px;
-	border: 3px solid white;
 }
 
 workshopicon preview
@@ -60,7 +54,6 @@ workshopicon name
 	top: 0;
 	right: 0;
 	text-align: left;
-	background-color: rgba( 255, 255, 255, 0.99 );
 	font-size: 14px;
 	font-weight: bold;
 	letter-spacing: -1px;
@@ -106,7 +99,6 @@ workshopicon author, workshopicon votes, workshopicon size
 	text-overflow: ellipsis;
 	font-family: "Arial";
 	color: #333;
-	background-color: rgba( 255, 255, 255, 1 );
 	border-radius: 4px 0 0 0;
 	padding: 3px 6px;
 
@@ -157,21 +149,11 @@ workshopicon votes
 
 workshopicon description
 {
-	position: absolute;
-	left: 0;
-	top: 0px;
-	bottom: 0px;
-	right: 0;
 	text-align: justify;
-	background-color: rgba( 70, 180, 250, 0.95 );
 	font-size: 11px;
-	padding: 32px 8px;
 	color: #fff;
 	cursor: default;
 	word-break: break-all;
-
-	opacity: 0;
-	-webkit-transition: opacity 100ms ease-in 0ms;
 }
 
 workshopicon .checkbox
@@ -189,7 +171,6 @@ workshopicon:hover description
 {
 	display: inherit;
 
-	opacity: 1;
 	-webkit-transition: opacity 50ms ease-in 0ms;
 }
 
@@ -197,7 +178,6 @@ workshopmessage
 {
 	font-size: 48px;
 	font-weight: bolder;
-	color: #999;
 	text-align: center;
 	display: block;
 	margin: 64px;
@@ -212,23 +192,13 @@ workshopmessage
 
 workshopcontainer
 {
-	position: absolute;
-	left: 0px;
-	top: 64px;
-	bottom: 0px;
-	right: 0px;
-	background-color: white;
-	border-radius: 3px;
-	padding: 8px;
+	width: 204px;
+	background-color: #00000055;
+	height: 100%;
 }
 
 controls
 {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	padding: 3px;
 	margin: 6px 5px;
 	overflow: display;
 }
@@ -237,7 +207,6 @@ controls control
 {
 	font-size: 11px;
 	display: inline-block;
-	background-color: #F5FF80;
 	padding: 2px 4px;
 	border-radius: 2px;
 	cursor: pointer;
@@ -262,7 +231,6 @@ controls control:hover
 	width: 44px;
 
 	padding: 6px;
-	background: #2387ed;
 	border-radius: 4px;
 	box-sizing: border-box;
 
@@ -270,10 +238,6 @@ controls control:hover
 	bottom: 4px;
 	right: 4px;
 	cursor: default;
-}
-.ugc_settings_button:hover
-{
-	background: #2691FF;
 }
 
 .ugc_settings
@@ -432,43 +396,5 @@ pagination a.page
 pagination a.page.active
 {
 	opacity: 1;
-}
-
-workshopicon.installed
-{
-	border-color: #d2fc7b;
-}
-workshopicon.installed name, workshopicon.installed author, workshopicon.installed votes, workshopicon.installed size
-{
-	background: #d2fc7b;
-}
-
-workshopicon.disabled
-{
-	border-color: #cedcb1;
-}
-workshopicon.disabled name, workshopicon.disabled author, workshopicon.disabled votes, workshopicon.disabled size
-{
-	background: #cedcb1;
-}
-
-workshopicon.invalid
-{
-	border-color: #d22;
-}
-workshopicon.invalid name, workshopicon.invalid author, workshopicon.invalid votes, workshopicon.invalid size
-{
-	background: #d22;
-	color: #fff;
-}
-
-workshopicon.invalid.disabled
-{
-	border-color: #922;
-}
-workshopicon.invalid.disabled name, workshopicon.invalid.disabled author, workshopicon.invalid.disabled votes, workshopicon.invalid.disabled size
-{
-	background: #922;
-	color: #fff;
 }
 
