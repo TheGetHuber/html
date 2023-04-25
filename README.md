@@ -8,7 +8,7 @@ Installatuon proccess is easy:
 2) Extract the files from the archive
 3) Change the name or delete the "html" folder in "garrysmod" folder
 4) Create new "html" folder for this addon
-4.1) Move files to it if needed
-5) Congratulations! You have installed the addon
+5) Move files to it if needed
+6) Congratulations! You have installed the addon
 
 **Almost all files are Facepunch's property.**
