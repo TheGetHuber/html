@@ -60,6 +60,7 @@ function ControllerAddons( $scope, $element, $rootScope, $location )
 	$scope.Disabled = false;
 	$scope.UGCSettingsOpen = false;
 	$scope.UGCSortMethod = "subscribed";
+	$scope.SelectedAddon;
 
 	lua.Run( "UpdateAddonDisabledState()" );
 
@@ -399,6 +400,17 @@ function ControllerAddons( $scope, $element, $rootScope, $location )
 
 		return Math.round( size / ( 1000 * 1000 * 1000 ), 2 ) + " GB"
 	}
+
+	$scope.SelectAddon = function( file ){
+
+		SelectedAddon = file
+		console.log(SelectedAddon)
+
+		document.querySelector("#addon_name").innerText = file.info.title
+		document.querySelector("#addon_icon").src = file.background || "img/downloading.png";
+		document.querySelector("#addon_description").innerText = $scope.GetAddonDescription(SelectedAddon)
+
+	}
 }
 
 function ReceivedChildAddonInfo( info )
@@ -422,3 +434,5 @@ function UpdateAddonDisabledState( noaddons, noworkshop )
 	Scope.Disabled = noworkshop;
 	UpdateDigest( Scope, 50 );
 }
+
+

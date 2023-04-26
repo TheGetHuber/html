@@ -23,21 +23,13 @@
 							<workshopmessage ng-show="( TotalResults == 0 || NumResults == 0 ) && !Loading && ( !Disabled || Category != 'subscribed' )" ng-Tranny="'addons.none'">...</workshopmessage>
 							<workshopmessage ng-show="TotalResults == 0 && !Loading && Disabled && Category == 'subscribed'" ng-Tranny="'addons.disabled'">...</workshopmessage>
 				
-							<workshopicon ng-hide="Loading" ng-repeat="file in Files" class="{{GetAddonClasses( file )}}">
-				
-								<!--<preview style="width: {{IconMax|number:0}}px; height: {{IconMax|number:0}}px; margin-left: -{{IconMax*0.5|number:0}}px; margin-top: -{{IconMax*0.5|number:0}}px">
-									<img src='../{{file.background || "img/downloading.png"}}' style="width: {{IconMax|number:0}}px; height: {{IconMax|number:0}}px;"/>
-									<disabled></disabled>
-								</preview>-->
+							<workshopicon ng-hide="Loading" ng-repeat="file in Files" class="{{GetAddonClasses( file )}}" ng-click="SelectAddon( file )">
 				
 								<name class="{{IfElse( Category == 'subscribed', 'subscription', '' )}}">
-									<label ng-click="OpenWorkshopFile( file.id )">{{file.extra.title || file.info.title || "Loading..."}}</label>
+									<label>{{file.extra.title || file.info.title || "Loading..."}}</label>
 								</name>
-								<author ng-hide="file.local">{{file.info.ownername || "Loading..."}}</author>
-								<size ng-hide="!file.info.size">{{GetNiceSize( file.info.size )}}</size>
-								<votes ng-show="!file.local && (file.info.up-file.info.down) > 0" >+{{file.info.up-file.info.down|number:0}}</votes>
-								<votes ng-show="!file.local && (file.info.up-file.info.down) < 0" class="negative">{{file.info.up-file.info.down|number:0}}</votes>
-								<description>{{GetAddonDescription( file )}}</description>
+								
+								
 								<input type="checkbox" class="checkbox" ng-show="(Category == 'subscribed') && !file.info.floating" ng-model="SelectedItems[ file.id ]" />
 				
 								<controls ng-show="!file.info.floating">
@@ -66,7 +58,7 @@
 						<p style="width: 100%; text-align: center; height: 8px" >Search</p>
 						<input type="text" style="width: 200px; height: 32px;">
 					</td>
-					<td><div class="mc-button" style="width: 204px"><p>Settings</p></div></td>
+					<td><div class="mc-button" style="width: 204px" ng-click="ToggleSettings()"><p>Settings</p></div></td>
 					<td><div class="mc-button" style="width: 204px"><a ng-href="#/"><p>Exit</p></a></div></td>
 				</tr>
 			</tbody>
@@ -74,7 +66,57 @@
 	
 		<div class="addondescription">
 			<div class="addoninfo">
-
+				<div>
+					<p id="addon_name">Welcome to Addon menu!</p>
+					<img id="addon_icon" src="" alt="addon_icon">
+					<p id="addon_description">There will be an addon's description. Click on any addon to see the information about it</p>
+				</div>
+				<div>
+					<div class="mc-button-disabled" style="width: 40px;"><p>+</p></div>
+					<div class="mc-button" style="width: 40px;"><p>-</p></div>
+					<div class="mc-button" style="width: 200px;"  ng-Tranny="'addon.subscribe'"></div>
+					<div class="mc-button" style="width: 200px;"  ng-Tranny="'addon.unsubscribe'"></div>
+				</div>
+				
+				<div ng-show="Category == 'subscribed'" class="ugc_settings {{IfElse(UGCSettingsOpen, 'active', 'hidden')}}">
+					<div class="ugc_settings_cat">
+						<span ng-Tranny="'addons.filter_by'"></span>
+						<input type="checkbox" ng-model="FilterEnabledOnly" ng-change="HandleFilterChange( 1 )"/><label ng-Tranny="'addons.enabled_only'"></label><br>
+						<input type="checkbox" ng-model="FilterDisabledOnly" ng-change="HandleFilterChange( 0 )"/><label ng-Tranny="'addons.disabled_only'"></label>
+					</div>
+					<div class="ugc_settings_cat">
+						<span ng-Tranny="'addons.sort_by'"></span>
+						<input type="radio" name=sort" value="title" ng-model="UGCSortMethod" ng-change="HandleSortChange()"/><label ng-Tranny="'addons.name'"></label><br>
+						<input type="radio" name=sort" value="size" ng-model="UGCSortMethod" ng-change="HandleSortChange()"/><label ng-Tranny="'addons.size'"></label><br>
+						<input type="radio" name=sort" value="updated" ng-model="UGCSortMethod" ng-change="HandleSortChange()"/><label ng-Tranny="'addons.update_date'"></label><br>
+						<input type="radio" name=sort" value="subscribed" ng-model="UGCSortMethod" ng-change="HandleSortChange()"/><label ng-Tranny="'addons.sub_date'"></label>
+					</div>
+					<div class="ugc_settings_cat"><!--<span>Selection:</span>-->
+						<div ng-show="!IsAnySelected()">
+							<a ng-click="SelectAll()" ng-Tranny="'addons.selectall'"></a>
+							<a ng-click="SelectAllPage()" ng-Tranny="'addons.selectpage'"></a>
+							<a ng-click="DisplayPopupMessage( 'addons.enableall.warning', EnableAllSubscribed )" ng-Tranny="'addons.enableall'"></a>
+							<a ng-click="DisplayPopupMessage( 'addons.disableall.warning', DisableAllSubscribed )" ng-Tranny="'addons.disableall'"></a>
+							<a ng-click="DisplayPopupMessage( 'addons.uninstallall.warning', UninstallAllSubscribed )" ng-Tranny="'addons.uninstallall'"></a>
+						</div>
+						<div ng-show="IsAnySelected()">
+							<a ng-click="UnselectAll()" ng-Tranny="'addons.unselectall'"></a>
+							<a ng-click="SelectAllPage()" ng-Tranny="'addons.selectpage'"></a>
+							<a ng-click="EnableAllSelected();" ng-Tranny="'addons.enable_selected'"></a>
+							<a ng-click="DisableAllSelected();" ng-Tranny="'addons.disable_selected'"></a>
+							<a ng-click="DisplayPopupMessage( 'addons.uninstall_selected.warning', UninstallAllSelected )" ng-Tranny="'addons.uninstall_selected'"></a>
+						</div>
+					</div>
+					<div class="ugc_settings_cat"><!--<span>Presets:</span>-->
+						<a ng-click="OpenCreatePresetMenu()" ng-Tranny="'addons.create_preset'"></a>
+						<a ng-click="OpenLoadPresetMenu()" ng-Tranny="'addons.load_preset'"></a>
+					</div>
+					
+					<div class="ugc_settings_cat"><!--<span>Stats:</span>-->
+						<span><font ng-Tranny="'addons.total_subscriptions'"></font> {{GetSubscribedCount()}}</span>
+						<span><font ng-Tranny="'addons.total_selected'"></font>  {{GetSelectedCount()}}</span>
+					</div>
+				</div>
 			</div>
 			<div class="addontools">
 				<div class="mc-button" style="width: 400px;"><a ng-href="#/"><p>Done</p></a></div>

@@ -6,6 +6,11 @@ workshopicon
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
+}
+workshopicon:active{
+	outline: 2px solid gray;
+	background: #000;
 }
 
 workshopicon preview
@@ -47,33 +52,13 @@ workshopicon:hover controls
 	-webkit-transition: bottom 100ms ease-in 200ms;
 }
 
-workshopicon name
-{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	text-align: left;
-	font-size: 14px;
-	font-weight: bold;
-	letter-spacing: -1px;
-	z-index: 10;
-	font-family: "Arial";
-	color: #666;
-	height: 22px;
-}
 workshopicon name label
 {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 2px;
 
-	padding: 2px 0px 4px 2px;
 	cursor: pointer;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;
+	text-overflow: clip;
 }
 workshopicon name.subscription label
 {
@@ -147,15 +132,6 @@ workshopicon votes
 	border-radius: 0 4px 0 0;
 }
 
-workshopicon description
-{
-	text-align: justify;
-	font-size: 11px;
-	color: #fff;
-	cursor: default;
-	word-break: break-all;
-}
-
 workshopicon .checkbox
 {
 	position: absolute;
@@ -225,36 +201,22 @@ controls control:hover
 	background-color: white;
 }
 
-.ugc_settings_button
-{
-	height: 44px;
-	width: 44px;
-
-	padding: 6px;
-	border-radius: 4px;
-	box-sizing: border-box;
-
-	position: absolute;
-	bottom: 4px;
-	right: 4px;
-	cursor: default;
-}
-
 .ugc_settings
 {
-	width: 100%;
+	width: 496px;
+	height: 332px;
 
 	padding: 10px;
-	background: #eee;
+	position: fixed;
+	left: 228px;
+	bottom: 128px;
+	background: url("../img/minecraft/addonsettings.png") no-repeat;
+	background-size: cover;
 
-	z-index: 128;
-	position: absolute;
-	bottom: 52px;
-	left: 0;
 	box-sizing: border-box;
+	display: flex;
 
 	visibility: hidden;
-	overflow: hidden;
 }
 .ugc_settings.active
 {

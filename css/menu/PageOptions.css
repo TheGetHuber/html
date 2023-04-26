@@ -1,5 +1,6 @@
 body{
 	text-shadow: 2px 2px 0px #0009;
+	color: white;
 }
 p{
 	font-size: medium;
@@ -452,6 +453,8 @@ th {
     display: flex;
     align-items: center;
     background: url("../../img/minecraft/mc-chunk0.png") no-repeat left, url("../../img/minecraft/mc-chunk1.png") no-repeat right, url("../../img/minecraft/mc-chunk2.png") repeat-x center;
+	text-align: center;
+	cursor: pointer;
 }
 .mc-button * {
 	color: white;
@@ -471,6 +474,24 @@ th {
 	font-weight: normal;
 	display: flex;
 	align-items: center;
+}
+.mc-button-disabled{
+	background: url("../../img/minecraft/mc-chunk0-deactive.png") no-repeat left, url("../../img/minecraft/mc-chunk1-deactive.png") no-repeat right, url("../../img/minecraft/mc-chunk2-deactive.png") repeat-x center;
+	cursor: default;
+    min-width: 40px;
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+	text-align: center;
+}
+.mc-button-disabled * {
+	color: white;
+    margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	margin-top: 20px;
+	font-size: medium;
 }
 
 /*	
@@ -542,6 +563,7 @@ th {
 	width: 100%;
 	height: inherit;
 	background-color: #00000055;
+	padding: 0 16px;
 }
 .addontools{
 	min-height: 52px;
@@ -553,6 +575,10 @@ th {
 .addontools div{
 	margin: 0 auto;
 	text-align: center;
+}
+#addon_icon{
+	height: 256px;
+	width: 256px;
 }
 
 .addontabmenu{
