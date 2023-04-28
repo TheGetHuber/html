@@ -34,8 +34,8 @@
 				
 								<controls ng-show="!file.info.floating">
 									<left>
-										<control ng-hide="file.local || file.rated" ng-click="Rate( file, true )"><img src='img/thumb-up.png' /></control>
-										<control ng-hide="file.local || file.rated" ng-click="Rate( file, false )"><img src='img/thumb-down.png' /></control>
+										<control ng-hide="file.local || file.rated" ng-click="Rate( SelectedAddon, true )"><img src='img/thumb-up.png' /></control>
+										<control ng-hide="file.local || file.rated" ng-click="Rate( SelectedAddon, false )"><img src='img/thumb-down.png' /></control>
 										<control ng-show="file.local" ng-click="PublishLocal( file )" ng-Tranny="'demos.publish'">..</control>
 										<control ng-show="file.local" ng-click="DeleteLocal( file )" ng-Tranny="'demos.delete'">..</control>
 									</left>
@@ -72,8 +72,8 @@
 					<p id="addon_description">There will be an addon's description. Click on any addon to see the information about it</p>
 				</div>
 				<div>
-					<div class="mc-button-disabled" style="width: 40px;"><p>+</p></div>
-					<div class="mc-button" style="width: 40px;"><p>-</p></div>
+					<div id="RateLikeButton" class="mc-button-disabled" style="width: 40px;"><p>+</p></div>
+					<div id="RateDislikeButton" class="mc-button-disabled" style="width: 40px;"><p>-</p></div>
 					<div class="mc-button" style="width: 200px;"  ng-Tranny="'addon.subscribe'"></div>
 					<div class="mc-button" style="width: 200px;"  ng-Tranny="'addon.unsubscribe'"></div>
 				</div>

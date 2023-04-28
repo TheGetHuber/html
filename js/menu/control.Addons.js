@@ -61,7 +61,8 @@ function ControllerAddons( $scope, $element, $rootScope, $location )
 	$scope.UGCSettingsOpen = false;
 	$scope.UGCSortMethod = "subscribed";
 	$scope.SelectedAddon;
-
+	$scope.SelectedAddonState = false;
+	
 	lua.Run( "UpdateAddonDisabledState()" );
 
 	addon.Init( 'addon', $scope, $rootScope );
@@ -404,13 +405,22 @@ function ControllerAddons( $scope, $element, $rootScope, $location )
 	$scope.SelectAddon = function( file ){
 
 		SelectedAddon = file
-		console.log(SelectedAddon)
+		RateLike = document.querySelector("#RateLikeButton")
+		RateDislike = document.querySelector("#RateDislikeButton")
 
 		document.querySelector("#addon_name").innerText = file.info.title
 		document.querySelector("#addon_icon").src = file.background || "img/downloading.png";
 		document.querySelector("#addon_description").innerText = $scope.GetAddonDescription(SelectedAddon)
+		
+		RateLike.className = "mc-button"
+		RateLike.ngClick = "RateAddon(true)"
 
+		RateDislike.className = "mc-button"
 	}
+	$scope.RateAddon = function( rating ){
+		$scope.Rate( SelectedAddon, rating )
+	}
+
 }
 
 function ReceivedChildAddonInfo( info )
