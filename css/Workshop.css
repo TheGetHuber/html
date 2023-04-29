@@ -152,18 +152,12 @@ workshopicon:hover description
 
 workshopmessage
 {
-	font-size: 48px;
+	font-size: 30px;
 	font-weight: bolder;
 	text-align: center;
 	display: block;
 	margin: 64px;
-}
-
-@media screen and (max-height: 800px) {
-	workshopmessage
-	{
-		margin: 16px;
-	}
+	transform: rotate(90deg);
 }
 
 workshopcontainer

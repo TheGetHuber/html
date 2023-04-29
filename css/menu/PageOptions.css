@@ -565,6 +565,22 @@ th {
 	background-color: #00000055;
 	padding: 0 16px;
 }
+.addoninfo_tools{
+	display: flex;
+	width: 100%;
+	min-height: 40px;
+	margin-top: -75px;
+}
+.addoninfo_tools div{
+	display: flex;
+}
+.addoninfo_tools_center{
+	width: inherit; 
+	display: flex; 
+}
+.addoninfo_tools_center div{
+	margin: 0 auto
+}
 .addontools{
 	min-height: 52px;
 	width: 100%;
@@ -574,7 +590,6 @@ th {
 }
 .addontools div{
 	margin: 0 auto;
-	text-align: center;
 }
 #addon_icon{
 	height: 256px;

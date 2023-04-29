@@ -43,9 +43,6 @@
 									<right>
 										<control ng-show="IsSubscribed( file ) && IsEnabled( file )" ng-click="Disable( file )" ng-Tranny="'addon.disable'">..</control>
 										<control ng-show="IsSubscribed( file ) && !IsEnabled( file )" ng-click="Enable( file )" ng-Tranny="'addon.enable'">..</control>
-				
-										<control ng-hide="IsSubscribed( file )" ng-click="Subscribe( file )" ng-Tranny="'addon.subscribe'">..</control>
-										<control ng-show="IsSubscribed( file )" ng-click="Unsubscribe( file )" ng-Tranny="'addon.unsubscribe'">..</control>
 									</right>
 								</controls>
 				
@@ -66,16 +63,28 @@
 	
 		<div class="addondescription">
 			<div class="addoninfo">
-				<div>
+				<div style="height: inherit;">
 					<p id="addon_name">Welcome to Addon menu!</p>
 					<img id="addon_icon" src="" alt="addon_icon">
 					<p id="addon_description">There will be an addon's description. Click on any addon to see the information about it</p>
 				</div>
-				<div>
-					<div id="RateLikeButton" class="mc-button-disabled" style="width: 40px;"><p>+</p></div>
-					<div id="RateDislikeButton" class="mc-button-disabled" style="width: 40px;"><p>-</p></div>
-					<div class="mc-button" style="width: 200px;"  ng-Tranny="'addon.subscribe'"></div>
-					<div class="mc-button" style="width: 200px;"  ng-Tranny="'addon.unsubscribe'"></div>
+				<div class="addoninfo_tools">
+					<div style="min-width: 33%">
+						<div class="mc-button" style="width: 140px;"><p ng-Tranny="'addon.enable'"></p></div>
+						<div class="mc-button" style="width: 140px;"><p ng-Tranny="'addon.disable'"></p></div>	
+					</div>
+					<div class="addoninfo_tools_center">
+						<div>
+							<div id="RateLikeButton" class="mc-button-disabled" style="width: 40px;" ng-click="RateAddon(true)"><p>+</p></div>
+							<div id="RateDislikeButton" class="mc-button-disabled" style="width: 40px;" ng-click="RateAddon(true)"><p>-</p></div>	
+						</div>
+					</div>
+					<div style="min-width: 33%">
+						<div style="margin: 0 24px 0 auto">
+							<div class="mc-button" style="width: 140px;"><p ng-Tranny="'addon.subscribe'"></p></div>
+							<div class="mc-button" style="width: 140px;"><p ng-Tranny="'addon.unsubscribe'"></p></div>		
+						</div>
+					</div>
 				</div>
 				
 				<div ng-show="Category == 'subscribed'" class="ugc_settings {{IfElse(UGCSettingsOpen, 'active', 'hidden')}}">
