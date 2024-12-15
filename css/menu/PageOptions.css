@@ -442,8 +442,43 @@ th {
 }
 
 /* ================================================================================ */
+/* ======================= Minecraft scroll flexable styles ======================= */
+/* =================== Allow to create Minecraft-styled scrolls =================== */
+/* ================================================================================ */
+
+input[type="range"]{
+	margin: 0;
+	min-width: 300px;
+	width: 300px;
+	text-align: center;
+	background: url("../../img/minecraft/mc-chunk0-deactive.png") no-repeat left, url("../../img/minecraft/mc-chunk1-deactive.png") no-repeat right, url("../../img/minecraft/mc-chunk2-deactive.png") repeat-x center;
+}
+input[type=range]::-webkit-slider-thumb {
+	background: url("../../img/minecraft/mc-scroll-thumb.png");
+	border: none;
+	border-radius: 0;
+	height: 40px;
+	cursor: pointer;
+}
+input[type=range]::-moz-range-thumb { /* Dublicate of the -webkit-slider-thumb, because I use Firefox to debug it. Garry's Mod uses Chromium to render the menu */
+	background: url("../../img/minecraft/mc-scroll-thumb.png");
+	border: none;
+	border-radius: 0;
+	height: 40px;
+	cursor: pointer;
+}
+
+.scrollText{ /* Component with this class must be <p>, placed right before the scroll, in the same tree. Could require furhter style aligments */
+	position: absolute;
+	width: 300px;
+	text-align: center;
+	margin-top: 12px;
+	pointer-events: none;
+}
+
+/* ================================================================================ */
 /* ======================= Minecraft button flexable styles ======================= */
-/* ==== Allows create Minecraft buttons out of elements using only their width ==== */
+/* === Allows to create Minecraft buttons out of elements using only their width == */
 /* ================================================================================ */
 
 .mc-button{

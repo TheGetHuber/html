@@ -13,6 +13,7 @@ App.config(function ( $routeProvider, $locationProvider )
 	$routeProvider.when('/demos/', { templateUrl: 'template/demos.html' } );
 	$routeProvider.when('/saves/', { templateUrl: 'template/saves.html' } );
 	$routeProvider.when('/dupes/', { templateUrl: 'template/dupes.html' } );
+	$routeProvider.when('/settings/', { templateUrl: 'template/settings.html' } );
 	$routeProvider.when('/gamesettings/', { templateUrl: 'template/minecraft/gamesettings.html' } );
 } );
 

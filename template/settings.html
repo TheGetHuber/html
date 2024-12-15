@@ -1,0 +1,50 @@
+<div class="page" id="settings" ng-controller="ControllerSettings">
+    <div class="wrapper">
+        <p style="margin-top: 30px;">Options</p>
+        <div class="menus">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <p id="fovValue" class="scrollText">FOV: {{fov}}</p>
+                <input type="range" min="60" max="120" ng-model="fov" ng-change="fovScrollChange()">
+                <div class="mc-button" style="min-width: 300px;">
+                    <p>Online...</p>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; margin-top: 66px;">
+                <div class="leftButtons">
+                    <div class="mc-button" style="min-width: 300px; " ng-click="MenuOption( this, 'OpenOptionsDialog')">
+                        <p>Obsolete settings</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Video Settings...</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Languange...</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Resource Packs...</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Telemetry Data</p>
+                    </div>
+                </div>
+                <div class="rightButtons">
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Music & Sounds</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Controls...</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Chat Settings...</p>
+                    </div>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <p>Accessibility Settings...</p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;display: flex;flex-direction: row;justify-content:center;margin-top: 11px;">
+                <div class="mc-button" style="width: 396px;"><a ng-href="#/"><p>Done</p></a></div>
+            </div>
+        </div>
+    </div>
+</div>
