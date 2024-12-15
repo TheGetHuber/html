@@ -38,3 +38,50 @@
 .rightButtons *{
     margin-bottom: 8px;
 }
+
+.graphics{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../img/minecraft/options_background.png");
+}
+
+.topMenu{
+    z-index: 1;
+    width: 100%;
+    min-height: 64px;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border: 2px solid #000;
+	backdrop-filter: brightness(25%);
+}
+
+.middleMenu{
+    height: inherit;
+    width: 100%;
+	backdrop-filter: brightness(13%);
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+.middleMenu table tbody tr td div:last-child{
+    margin-left: 20px;
+}
+.middleMenu table tbody tr td input:last-child{
+    margin-left: 20px;
+}
+
+.bottomMenu{
+    z-index: 1;
+	backdrop-filter: brightness(25%);
+    min-height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
