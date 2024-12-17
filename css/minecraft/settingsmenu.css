@@ -7,10 +7,10 @@
 .wrapper{
     width: 100%; 
     height: 100%;
-    backdrop-filter: brightness(0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
+    backdrop-filter: brightness(0.3);
 }
 
 .menus{
@@ -39,16 +39,6 @@
     margin-bottom: 8px;
 }
 
-.graphics{
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../../img/minecraft/options_background.png");
-}
-
 .topMenu{
     z-index: 1;
     width: 100%;
@@ -58,15 +48,17 @@
     align-items: center;
     justify-content: end;
     border: 2px solid #000;
-	backdrop-filter: brightness(25%);
+	/*backdrop-filter: brightness(25%);*/
 }
 
 .middleMenu{
     height: inherit;
     width: 100%;
-	backdrop-filter: brightness(13%);
+	backdrop-filter: brightness(66%);
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
-    align-items: center ;
+    align-items:start;
     justify-content: center;
 }
 .middleMenu table tbody tr td div:last-child{
@@ -78,7 +70,7 @@
 
 .bottomMenu{
     z-index: 1;
-	backdrop-filter: brightness(25%);
+	/*backdrop-filter: brightness(25%);*/
     min-height: 64px;
     width: 100%;
     display: flex;

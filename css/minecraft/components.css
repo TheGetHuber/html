@@ -1,0 +1,148 @@
+
+
+/* ================================================================================ */
+/* ======================= Minecraft scroll flexable styles ======================= */
+/* =================== Allow to create Minecraft-styled scrolls =================== */
+/* ================================================================================ */
+
+input[type="range"]{
+	margin: 0;
+	min-width: 300px;
+	width: 300px;
+	text-align: center;
+	background: url("../../img/minecraft/mc-chunk0-deactive.png") no-repeat left, url("../../img/minecraft/mc-chunk1-deactive.png") no-repeat right, url("../../img/minecraft/mc-chunk2-deactive.png") repeat-x center;
+}
+input[type=range]::-webkit-slider-thumb {
+	background: url("../../img/minecraft/mc-scroll-thumb.png");
+	border: none;
+	border-radius: 0;
+	height: 40px;
+	cursor: pointer;
+}
+input[type=range]::-moz-range-thumb { /* Dublicate of the -webkit-slider-thumb, because I use Firefox to debug it. Garry's Mod uses Chromium to render the menu */
+	background: url("../../img/minecraft/mc-scroll-thumb.png");
+	border: none;
+	border-radius: 0;
+	height: 40px;
+	cursor: pointer;
+}
+
+.scrollText{ /* Component with this class must be <p>, placed right before the scroll, in the same tree. Could require furhter style aligments */
+	position: absolute;
+	width: 300px;
+	text-align: center;
+	margin-top: 12px;
+	pointer-events: none;
+}
+
+/* ================================================================================ */
+/* ======================= Minecraft button flexable styles ======================= */
+/* === Allows to create Minecraft buttons out of elements using only their width == */
+/* ================================================================================ */
+
+.mc-button{
+    min-width: 40px;
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: url("../../img/minecraft/mc-chunk0.png") no-repeat left, url("../../img/minecraft/mc-chunk1.png") no-repeat right, url("../../img/minecraft/mc-chunk2.png") repeat-x center;
+	text-align: center;
+	cursor: pointer;
+    user-select: none;
+}
+.mc-button * {
+	color: white;
+    margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	margin-top: 20px;
+	font-size: medium;
+}
+
+.mc-button:hover{
+	background: url("../../img/minecraft/mc-chunk0-hover.png") no-repeat left, url("../../img/minecraft/mc-chunk1-hover.png") no-repeat right, url("../../img/minecraft/mc-chunk2-hover.png") repeat-x center;
+}
+
+.mc-button a{
+	margin: 0 auto;
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+}
+.mc-button-disabled{
+	background: url("../../img/minecraft/mc-chunk0-deactive.png") no-repeat left, url("../../img/minecraft/mc-chunk1-deactive.png") no-repeat right, url("../../img/minecraft/mc-chunk2-deactive.png") repeat-x center;
+	cursor: default;
+    min-width: 40px;
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+	text-align: center;
+}
+.mc-button-disabled * {
+	color: white;
+    margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	margin-top: 20px;
+	font-size: medium;
+}
+
+/*	
+	//
+	// Upper block styles
+	//
+*/
+
+.upperblock{
+	min-height: 64px;
+	width: 100%;
+	backdrop-filter: brightness(25%);
+}
+/*	
+	//
+	// Main block styles
+	//
+*/
+.mainblock{
+	width: 100%;
+	backdrop-filter: brightness(13%);
+}
+/*	
+	//
+	// Footer block styles
+	//
+*/
+.footerblock{
+	min-height: 130px;
+	width: 100%;
+	backdrop-filter: brightness(25%);
+}
+
+/* ================================================================================ */
+/* ======================== Minecraft list flexable styles ======================== */
+/* ====================== Allows to add a minecraft-like list ===================== */
+/* ================================================================================ */
+
+ul.list{
+    list-style-type: none;
+    padding: 0;
+    min-width: 540px;
+}
+
+ul.list li{
+    height: 36px;
+    min-width: 538px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+ul.list li.active{
+    outline: 2px solid #808080;
+}
+ul.list li p{
+    pointer-events: none;
+}

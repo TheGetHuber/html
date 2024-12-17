@@ -6,7 +6,7 @@
                 <p id="fovValue" class="scrollText">FOV: {{fov}}</p>
                 <input type="range" min="60" max="120" ng-model="fov" ng-change="fovScrollChange()">
                 <div class="mc-button" style="min-width: 300px;">
-                    <p>Online...</p>
+                    <a ng-href="#/settings/online/"><p>Online...</p></a>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; margin-top: 66px;">
@@ -14,153 +14,36 @@
                     <div class="mc-button" style="min-width: 300px; " click="MenuOption( this, 'OpenOptionsDialog')">
                         <p>Obsolete settings</p>
                     </div>
-                    <div class="mc-button" style="min-width: 300px;" onclick="$('.graphics').show()">
-                        <p>Video Settings...</p>
+                    <div class="mc-button" style="min-width: 300px;">
+                        <a ng-href="#/settings/graphics/"><p>Video Settings...</p></a>
                     </div>
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Languange...</p>
+                        <a ng-href="#/settings/language/"><p>Language...</p></a>
                     </div>
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Resource Packs...</p>
+                        <a ng-href="#/settings/resourcepacks/"><p>Resource Packs...</p></a>
                     </div>
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Telemetry Data</p>
+                        <a ng-href="#/settings/telemetry/"><p>Telemetry Data</p></a>
                     </div>
                 </div>
                 <div class="rightButtons">
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Music & Sounds</p>
+                        <a ng-href="#/settings/music/"><p>Music & Sounds</p></a>
                     </div>
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Controls...</p>
+                        <a ng-href="#/settings/controls/"><p>Controls...</p></a>
                     </div>
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Chat Settings...</p>
+                        <a ng-href="#/settings/chat/"><p>Chat Settings...</p></a>
                     </div>
                     <div class="mc-button" style="min-width: 300px;">
-                        <p>Accessibility Settings...</p>
+                        <a ng-href="#/settings/access/"><p>Accessibility Settings...</p></a>
                     </div>
                 </div>
             </div>
             <div style="width: 100%;display: flex;flex-direction: row;justify-content:center;margin-top: 11px;">
                 <div class="mc-button" style="width: 396px;"><a ng-href="#/"><p>Done</p></a></div>
-            </div>
-        </div>
-        <div class="graphics" style="display: none;">
-            <div class="topMenu">
-                <p>Video settings</p>
-            </div>
-            <div class="middleMenu">
-                <table style="margin: 16 auto;width: fit-content;">
-                    <tbody style="margin: 0;">
-                        <tr>
-                            <td>
-                                <p id="fovValue" style="width: 618px;" class="scrollText">Resolution: {{fov}}</p>
-                                <input type="range" style="width: 618px;margin: 0;">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="fovValue" style="width: 618px;" class="scrollText">Biome Blend: {{fov}}</p>
-                                <input type="range" style="width: 618px;margin: 0;">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Graphics: Fancy</p>
-                                </div>
-                                <p id="fovValue" class="scrollText" style="margin-left: 320px;">Render Distance: 12 chunks</p>
-                                <input type="range"">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>CHunk Builder: Threaded</p>
-                                </div>
-                                <p id="fovValue" class="scrollText" style="margin-left: 320px;">Simulation Distance: 12 chunks</p>
-                                <input type="range"">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Smooth Lightning: ON</p>
-                                </div>
-                                <p id="fovValue" class="scrollText" style="margin-left: 320px;"> Max Framerate: 120 fps</p>
-                                <input type="range"">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>VSync: ON</p>
-                                </div>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>View Bobbing: ON</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="fovValue" class="scrollText">Brightness: Default</p>
-                                <input type="range"">
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Clouds: Fancy</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Fullscreen: OFF</p>
-                                </div>
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Particles: All</p>
-                                </div>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="fovValue" class="scrollText">Mipmap Levels: 4</p>
-                                <input type="range"">
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Entity Shadows: ON</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="fovValue" class="scrollText">Distortion Effects: 100%</p>
-                                <input type="range"">
-                                <p id="fovValue" class="scrollText" style="margin-left: 320px;">Entity Distance: 100%</p>
-                                <input type="range"">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="fovValue" class="scrollText">FOV Effects: 100%</p>
-                                <input type="range"">
-                                <div class="mc-button" style="width: 300px;">
-                                    <p>Autosave Indicator: ON</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="bottomMenu">
-                
-                <div class="mc-button" style="min-width: 400px;">
-                    <p  onclick="$('.graphics').hide()">Done</p>
-                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,19 @@
+<div class="page" ng-controller="ControllerSettings">
+    <div class="wrapper">
+        <div class="topMen">
+            <p>Language</p>
+        </div>
+        <div class="middleMenu">
+            <ul class="list">
+                <li ng-repeat="lang in language" ng-click="selectLang(lang)" class="{{isLangSelected(lang)}}">
+                    <p>{{lang}}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="bottomMenu">
+            <div class="mc-button" style="min-width: 400px;">
+                <a ng-href="#/settings/"><p">Done</p></a>
+            </div>
+        </div>
+    </div> 
+</div>

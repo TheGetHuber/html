@@ -15,6 +15,16 @@ App.config(function ( $routeProvider, $locationProvider )
 	$routeProvider.when('/dupes/', { templateUrl: 'template/dupes.html' } );
 	$routeProvider.when('/settings/', { templateUrl: 'template/settings.html' } );
 	$routeProvider.when('/gamesettings/', { templateUrl: 'template/minecraft/gamesettings.html' } );
+	
+	$routeProvider.when('/settings/graphics', { templateUrl: 'template/minecraft/settings/graphics.html' } );
+	$routeProvider.when('/settings/access', { templateUrl: 'template/minecraft/settings/access.html' } );
+	$routeProvider.when('/settings/controls', { templateUrl: 'template/minecraft/settings/controls.html' } );
+	$routeProvider.when('/settings/language', { templateUrl: 'template/minecraft/settings/language.html' } );
+	$routeProvider.when('/settings/music', { templateUrl: 'template/minecraft/settings/music.html' } );
+	$routeProvider.when('/settings/chat', { templateUrl: 'template/minecraft/settings/chat.html' } );
+	$routeProvider.when('/settings/online', { templateUrl: 'template/minecraft/settings/online.html' } );
+	$routeProvider.when('/settings/resourcepacks', { templateUrl: 'template/minecraft/settings/resourcepacks.html' } );
+	$routeProvider.when('/settings/telemetry', { templateUrl: 'template/minecraft/settings/telemetry.html' } );
 } );
 
 function UpdateDigest( scope, timeout )
