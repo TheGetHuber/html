@@ -24,7 +24,7 @@ App.config(function ( $routeProvider, $locationProvider )
 	$routeProvider.when('/settings/chat', { templateUrl: 'template/minecraft/settings/chat.html' } );
 	$routeProvider.when('/settings/online', { templateUrl: 'template/minecraft/settings/online.html' } );
 	$routeProvider.when('/settings/resourcepacks', { templateUrl: 'template/minecraft/settings/resourcepacks.html' } );
-	$routeProvider.when('/settings/telemetry', { templateUrl: 'template/minecraft/settings/telemetry.html' } );
+	$routeProvider.when('/settings/menusettings', { templateUrl: 'template/minecraft/settings/menusettings.html' } );
 } );
 
 function UpdateDigest( scope, timeout )

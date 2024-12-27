@@ -1,0 +1,72 @@
+<div class="page" ng-controller="ControllerSettings">
+    <div class="wrapper">
+        <div class="topMenu">
+            <p>Music & Sound Options</p>
+        </div>
+        <div class="middleMenu">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p id="fovValue" style="width: 620px;" class="scrollText">Master Volume: {{fov}}</p>
+                            <input type="range" style="width: 620px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p id="fovValue" style="width: 320px;" class="scrollText">Music: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                        <td><p id="fovValue" style="width: 320px;" class="scrollText">Jukebox/Note Blocks: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                    </tr>
+                    <tr>
+                        <td><p id="fovValue" class="scrollText">Weather: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                        <td><p id="fovValue" class="scrollText">Blocks: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                    </tr>
+                    <tr>
+                        <td><p id="fovValue" class="scrollText" >Hostile Creatures: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                        <td><p id="fovValue" class="scrollText">Friendly Creatures: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                    </tr>
+                    <tr>
+                        <td><p id="fovValue" class="scrollText">Players: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                        <td><p id="fovValue" class="scrollText">Ambient/Environment: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                    </tr>
+                    <tr>
+                        <td><p id="fovValue" class="scrollText">Voice/Speech: {{fov}}</p>
+                            <input type="range" style="width: 300px;"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="mc-button" style="min-width: 620px;">
+                                <p>Device System: {{fov}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="mc-button" style="width: 300px;">
+                                <p>Show Subtitles: {{fov}}</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mc-button" style="width: 300px;">
+                                <p>Directional Audio: {{fov}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bottomMenu">
+            <div class="mc-button" style="min-width: 400px;">
+                <a ng-href="#/settings/"><p">Done</p></a>
+            </div>
+        </div>
+    </div>  
+</div>

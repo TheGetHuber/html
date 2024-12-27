@@ -13,8 +13,15 @@ function ControllerSettings($scope, $element, $rootScope){
     
     $scope.fov = 90 // TODO: replace this 90 with output of current fov
 
+    $scope.zoom = 1
+
     $scope.fovScrollChange = function(){
         lua.Run("fov " + $scope.fov)
+    }
+    
+    $scope.changeZoom = function(){
+        $scope.zoom += 0.5
+        document.body.style.zoom = $scope.zoom
     }
 
     $scope.MenuOption = function( btn, v )
