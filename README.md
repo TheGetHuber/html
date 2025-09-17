@@ -1,5 +1,7 @@
 # Minecraft main menu for Garry's Mod
 
+Archived for better times.
+
 Web main menu that looks like Minecraft for Garry's Mod.
 This *addon* is in beta but still playable. 
 
